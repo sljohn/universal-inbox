@@ -2,13 +2,16 @@
   "name": "universal-inbox",
   "version": "0.1.0",
   "description": "A universal inbox for businesses",
-  "dependencies": {},
+  "dependencies": {
+    "express": "*"
+  },
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.5.3",
     "nodemon": "*"
   },
   "scripts": {
+    "start": "nodemon index.js",
     "test": "mocha"
   },
   "repository": {
