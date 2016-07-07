@@ -1,12 +1,23 @@
-var Twitter = require('Twitter');
+const Twitter = require('Twitter');
+const env = require('node-env-file');
 
-var client = new Twitter({
-  consumer_key: 'MSzCH9H5I97C7UjpTENbzVvFN',
-  consumer_secret: '1KLNCBVmOhVtd1hakouhP5SKrNmXSlKFEO1C349bIPqo88Vdq6',
-  bearer_token: 'AAAAAAAAAAAAAAAAAAAAADbzvwAAAAAAP040xC5nE0ZV7tIX3YtfS8kfLy4%3DWwBRk6JQS0xQ4HBLVBJlZxDkpdLqq3larmBtOP58cZNJ6YHPQT'
+env(__dirname + '/.env');
+
+const client = new Twitter({
+  consumer_key: process.env.CONSUMER_KEY,
+  consumer_secret: process.env.CONSUMER_SECRENT,
+  bearer_token: process.env.BEARER_TOKEN
 });
 
-client.get('search/tweets', {q: '%40twitterapi'}, function(error, tweets, response) {
-	if (error) {console.log(error)};
-  console.log(JSON.stringify(tweets.statuses[0]));
-});
+module.exports = {};
+module.exports.searchUser = function(username) {
+  //prepend all usernames with %40, replacing the @ symbol if provided
+  username = username.replace(/^(@|%40)?/, '%40');
+
+  return client.get('search/tweets', {q: username}, function(error, tweets, response) {
+    if (error) {
+      console.log(error)
+    };
+    return tweets;
+  });
+};
