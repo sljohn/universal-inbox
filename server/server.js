@@ -1,15 +1,23 @@
+'use strict';
+
 const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
 const path = require('path');
-const dotenv = require('dotenv');
 const expressValidator = require('express-validator');
 const db = require('./db/db');
 
 /*
 ** Load local enviroment variables from .env file where secrets and keys are configured.
 */
-dotenv.load({ path: '.env' });
+
+let dotenv;
+if (process.env.RUN_MODE === 'PRODUCTION') {
+  dotenv = process.env;
+} else {
+  dotenv = require('dotenv');
+  dotenv.load({ path: '.env' });
+}
 
 /*``
 ** Route Controllers
