@@ -6,6 +6,7 @@ configUntracked.js
 # Workspace files
 .idea/workspace.xml
 .idea/shelf
+.vscode
 
 # Logs and databases #
 ######################
