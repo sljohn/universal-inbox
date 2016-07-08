@@ -8,24 +8,24 @@ const expressValidator = require('express-validator');
 const db = require('./db/db');
 
 /*
-** Load local enviroment variables from .env file where secrets and keys are configured.
-*/
+ ** Load local enviroment variables from .env file where secrets and keys are configured.
+ */
 const dotenv = require('dotenv');
 dotenv.load({ path: '.env' });
 
 /*``
-** Route Controllers
-*/
+ ** Route Controllers
+ */
 const homeController = require('./controllers/home');
 
 /*
-** Create Express server.
-*/
+ ** Create Express server.
+ */
 const app = express();
 
 /*
-** Express configuration.
-*/
+ ** Express configuration.
+ */
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(bodyParser.json());
@@ -41,8 +41,8 @@ app.use(session({
 app.use(express.static(path.join(__dirname, '../public')));
 
 /*
-** App routes.
-*/
+ ** App routes.
+ */
 app.get('/', homeController.index);
 
 const postRoutes = require('./routes/postRoutes');
