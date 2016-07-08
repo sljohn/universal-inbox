@@ -37,7 +37,7 @@ app.use(session({
   saveUninitialized: false,
   secret: process.env.SESSION_SECRET,
 }));
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, '../client/')));
 
 /*
 ** App routes.
