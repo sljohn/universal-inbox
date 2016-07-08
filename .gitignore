@@ -54,6 +54,7 @@ bower_components
 *.rar
 *.tar
 *.zip
+client/lib
 
 # OS generated files #
 ######################
