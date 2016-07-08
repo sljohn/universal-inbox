@@ -6,12 +6,8 @@ mongoose.connect(DB_ADDRESS + '/universal-inbox');
 const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error: '));
-db.once('open', function(){
+db.once('open', function () {
   console.log('db connected');
 });
-
-db.userSchema = mongoose.Schema({}); // TODO
-
-db.tweetSchema = mongoose.Schema({}); // TODO
 
 module.exports = db;
