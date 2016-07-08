@@ -13,6 +13,8 @@ body {
     -o-background-size: cover;
 }
 
+
+
 h1,
 h2,
 h3,
@@ -192,4 +194,16 @@ footer p {
         display: table;
         clear: both;
     }
+}
+
+.brand {
+    margin-left: 1100px;
+}
+
+.container.regBox {
+    margin-top: 200px;
+}
+
+input {
+    width: 300px;
 }
