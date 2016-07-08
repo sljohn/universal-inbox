@@ -1,6 +1,7 @@
 # Environment variables, secret values, etc.
 configUntracked.js
 .idea
+.env
 
 # Workspace files
 .idea/workspace.xml
@@ -23,6 +24,7 @@ pids
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 node_modules
 jspm_packages
+bower_components
 
 # Optional npm cache directory
 .npm
