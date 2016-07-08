@@ -35,7 +35,7 @@ app.use(session({
   resave: true,
   // Do not initialize a session until a user is signed in.
   saveUninitialized: false,
-  secret: process.env.SESSION_SECRET,
+  secret: process.env.SESSION_SECRET || dotenv.SESSION_SECRET,
 }));
 app.use(express.static(path.join(__dirname, '../public')));
 
