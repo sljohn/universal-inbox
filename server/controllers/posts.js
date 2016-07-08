@@ -1,3 +1,4 @@
+'use strict'; //node requires this for the use of 'let'
 const dummyTweets = require('../db/dummyTweets.json');
 const twitter = require('./twitter.js');
 
