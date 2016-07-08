@@ -42,4 +42,5 @@ app.use(express.static(path.join(__dirname, '../public')));
 */
 app.get('/', homeController.index);
 
+
 module.exports = app;
