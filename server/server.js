@@ -33,9 +33,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressValidator());
 app.use(session({
   resave: true,
-  // Do not initialize a session until a user is signed in.
-  saveUninitialized: false,
-  secret: process.env.SESSION_SECRET,
+  saveUninitialized: false, // Do not initialize a session until a user is signed in.
+  secret: process.env.SESSION_SECRET || dotenv.SESSION_SECRET,
 }));
 app.use(express.static(path.join(__dirname, '../public')));
 
