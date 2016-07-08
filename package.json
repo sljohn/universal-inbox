@@ -8,6 +8,7 @@
     "express-session": "^1.14.0",
     "express-validator": "^2.20.8",
     "jade": "^1.11.0",
+    "mongoose": "*",
     "request": "^2.72.0",
     "validator": "^5.4.0"
   },
