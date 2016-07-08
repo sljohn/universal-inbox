@@ -8,9 +8,9 @@ const expressValidator = require('express-validator');
 /*
 ** Load local enviroment variables from .env file where secrets and keys are configured.
 */
-dotenv.load({ path: '.env' });
+dotenv.load({path: '.env'});
 
-/*
+/*``
 ** Route Controllers
 */
 const homeController = require(path.join(__dirname, 'controllers/home'));
@@ -27,7 +27,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(bodyParser.json());
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressValidator());
 app.use(session({
   resave: true,
