@@ -1,8 +1,8 @@
 const Twitter = require('Twitter');
-const dotenv = require('dotenv');
+// const dotenv = require('dotenv');
 const path = require('path');
 
-dotenv.load({path: path.__dirname + '/../.env'});
+// dotenv.load({path: path.__dirname + '/../.env'});
 
 console.log(process.env)
 const client = new Twitter({
@@ -26,4 +26,4 @@ function getTweets (username, since_id) {
   });
 };
 
-module.exports.searchUser = searchUser;
+module.exports.getTweets = getTweets;
