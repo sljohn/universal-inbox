@@ -22,7 +22,7 @@
     "nodemon": "*"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "RUN_MODE=PRODUCTION node index.js",
     "dev": "nodemon index.js",
     "test": "mocha",
     "postinstall": "./node_modules/bower/bin/bower install"
