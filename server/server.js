@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const dotenv = require('dotenv');
 const expressValidator = require('express-validator');
-const db = require('db/db');
+const db = require('./db/db');
 
 /*
 ** Load local enviroment variables from .env file where secrets and keys are configured.
