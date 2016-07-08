@@ -1,12 +1,19 @@
 {
-  "name": "get-in-touch-mvp",
-  "version": "0.0.1",
-  "ignore": [
-    "node_modules",
-    "bower_components",
-    "client/lib"
+  "name": "universal-inbox",
+  "description": "A universal inbox for businesses",
+  "main": "index.js",
+  "authors": [
+    "Nico Greenarry",
+    "Bonnie Torre",
+    "Justin Lien",
+    "John Slape"
   ],
+  "license": "ISC",
+  "homepage": "https://github.com/JustinLien/universal-inbox",
   "dependencies": {
-    "angular": "~1.2.18"
+    "bootstrap": "^3.3.6",
+    "angular": "angularjs#^1.5.7",
+    "jquery": "^3.1.0",
+    "angular-ui-router": "^0.3.1"
   }
 }
