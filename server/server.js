@@ -45,6 +45,6 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.get('/', homeController.index);
 
 const postRoutes = require('./routes/postRoutes');
-app.use('/posts', postRoutes);
+app.use('/api/posts', postRoutes);
 
 module.exports = app;
