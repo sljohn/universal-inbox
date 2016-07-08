@@ -40,7 +40,7 @@ app.use(session({
   saveUninitialized: false, // Do not initialize a session until a user is signed in.
   secret: process.env.SESSION_SECRET || dotenv.SESSION_SECRET,
 }));
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, '../client/')));
 
 /*
 ** App routes.
