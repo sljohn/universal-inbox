@@ -97,7 +97,7 @@ const dummyTweets = {
         "screen_name": "sean_cummings"
       },
       "in_reply_to_screen_name": null,
-      "source": "<a href="//itunes.apple.com/us/app/twitter/id409789998?mt=12%5C%22" rel="\"nofollow\"">Twitter for Mac</a>",
+      "source": 'Twitter for Mac',
       "in_reply_to_status_id": null
     },
     {
@@ -394,11 +394,11 @@ const dummyTweets = {
         "friends_count": 249,
         "following": null,
         "show_all_inline_media": true,
-        "screen_name": "Omnitarian"
+        "screen_name": "Omnitarian",
       },
       "in_reply_to_screen_name": null,
-      "source": "<a href="//twitter.com/download/iphone%5C%22" rel="\"nofollow\"">Twitter for iPhone</a>",
-      "in_reply_to_status_id": null
+      "source": 'Twitter for Mac',
+      "in_reply_to_status_id": null,
     }
   ],
   "search_metadata": {
@@ -417,4 +417,3 @@ const dummyTweets = {
 exports.getAllPosts = (req, res) => {
   res.send(dummyTweets.statuses);
 };
-
