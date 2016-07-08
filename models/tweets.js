@@ -5,9 +5,12 @@ const tweetSchema = mongoose.Schema({
   id: mongoose.Schema.Types.ObjectId,
   created_at: String,
   text: String,
-  user: Mixed,
+  user: {
+    handle: String,
+    fullname: String,
+  },
 });
 
 const Tweet = mongoose.model('Tweet', tweetSchema);
 
-module.exports = tweetSchema;
+module.exports = Tweet;
