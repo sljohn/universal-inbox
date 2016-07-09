@@ -12,8 +12,10 @@ html(lang='en', ng-app='universal-inbox')
   body
     //- include partials/header
 
-    .container(ui-view)
-      block content
+    //- .container(ui-view)
+    //-   block content
+    ui-view
+        block content
 
     //- include partials/footer
 
@@ -23,4 +25,5 @@ html(lang='en', ng-app='universal-inbox')
     script(src='//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js')
     script(src='../app/router.js')
     script(src='../app/services/post.factory.js')
+    script(src='../app/main.controller.js')
     script(src='../app.js')
