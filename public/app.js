@@ -1,4 +1,6 @@
-angular.module('universal-inbox', [
-  'universal-inbox.services',
-  'universal-inbox.posts',
-]);
+angular
+  .module('universal-inbox', [
+    'universal-inbox.router',
+    'universal-inbox.PostsFactory',
+    'ui.router'
+  ]);
