@@ -15,7 +15,7 @@ if (!process.env.SESSION_SECRET) { // If it's undefined, then we're running loca
   dotenv.load({ path: '.env' });
 }
 
-/*``
+/*
 ** Route Controllers
 */
 const homeController = require('./controllers/home');
@@ -40,7 +40,7 @@ app.use(session({
   saveUninitialized: false, // Do not initialize a session until a user is signed in.
   secret: process.env.SESSION_SECRET || dotenv.SESSION_SECRET,
 }));
-app.use(express.static(path.join(__dirname, '../client/')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 /*
 ** App routes.
