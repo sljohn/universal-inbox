@@ -1,14 +1,13 @@
 angular
   .module('universal-inbox.router', ['ui.router'])
   .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
-    $urlRouterProvider.otherwise('home');
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider
-      .state('home', {
+      .state('/', {
         url: '/',
-        templateUrl: 'partials/home.html',
-        controller: 'MainController'
+        templateUrl: 'app/partials/feed.html',
+        controller: 'MainController as vm'
       });
 
-    // $locationProvider.html5Mode(true);
   });
