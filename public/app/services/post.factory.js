@@ -1,6 +1,6 @@
 angular
   .module('universal-inbox.PostsFactory', [])
-  .factory('PostsFactory', function() {
+  .factory('PostsFactory', function($http) {
 
     function myCoolFnc() {
       // function body
