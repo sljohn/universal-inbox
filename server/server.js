@@ -11,7 +11,7 @@ const db = require('./db/db');
 */
 dotenv.load({ path: '.env' });
 
-/*``
+/*
 ** Route Controllers
 */
 const homeController = require('./controllers/home');
@@ -37,7 +37,7 @@ app.use(session({
   saveUninitialized: false,
   secret: process.env.SESSION_SECRET,
 }));
-app.use(express.static(path.join(__dirname, '../client/')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 /*
 ** App routes.
