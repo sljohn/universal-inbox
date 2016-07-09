@@ -1,73 +1,48 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="universal-inbox">
+<div class="brand">LOGOUT</div>
+<!--<div class="address-bar">3481 Melrose Place | Beverly Hills, CA 90210 | 123.456.7890</div> -->
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
+<!-- Navigation -->
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container"><!--container class creates the white boxes that hold our navbar and messages-->
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+      <a class="navbar-brand" href="index.html">Universal Inbox</a>
+    </div><!-- close navbar header-->
 
-  <title>Universal Inbox</title>
+    <!-- Navbar options -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">All New Posts</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Completed</a></li>
+      </ul>
+    </div><!--end navbar options-->
+  </container><!-- end container (for the navigation bar)-->
+</nav>
 
-  <!-- Bootstrap Core CSS --><link href="./assets/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS --><link href="./assets/css/business-casual.css" rel="stylesheet">
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Open+Sans" rel="stylesheet">
-</head>
-
-<body>
-  <!-- *** TITLE CAN GO HERE, BUT I REMOVED IT FOR NOW ** --><div class="brand">LOGOUT</div>
-  <!--<div class="address-bar">3481 Melrose Place | Beverly Hills, CA 90210 | 123.456.7890</div> -->
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-default" role="navigation">
-    <div class="container"><!--container class creates the white boxes that hold our navbar and messages-->
-      
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-        <a class="navbar-brand" href="index.html">Universal Inbox</a>
-      </div><!-- close navbar header-->
-
-      <!-- Navbar options -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="#">All New Posts</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Completed</a></li>
-        </ul>
-      </div><!--end navbar options-->
-    </container><!-- end container (for the navigation bar)-->
-  </nav>
-
-  <div class="container" ng-controller="PostsController">
-    <div class="row">
-      <div class="box">
-        <div class="col-lg-12 text-center">
-          <h2 class="brand-before">
-            <small>{{Name}} {{@username}}</small>
-          </h2>
-          <h1 class="brand-name">{{messageBody}}</h1>
-          <hr class="tagline-divider"><!--break line-->
-          <h2>
-            <small>Created on:
-              <strong>{{date}} at {{time}}</strong>
-            </small>
-          </h2>
-        </div><!--end col-lg-12 text-center class-->
-      </div><!--end box class-->
-    </div><!--end row class-->
-  </div><!--end container class-->
-
-
-  <!-- jQuery --><script src="./assets/js/jquery.js"></script>
-  <!-- Bootstrap Core JavaScript --><script src="./assets/js/bootstrap.min.js"></script>
-</body>
-</html>
+<div class="container">
+  <div class="row">
+    <div class="box">
+      <div class="col-lg-12 text-center">
+        <h2 class="brand-before">
+          <small>{{ vm.name }} {{ vm.username }}</small>
+        </h2>
+        <h1 class="brand-name">{{ vm.messageBody }}</h1>
+        <hr class="tagline-divider">
+        <h2>
+          <small>Created on:
+            <strong>{{ vm.dateTime }}</strong>
+          </small>
+        </h2>
+      </div><!--end col-lg-12 text-center class-->
+    </div><!--end box class-->
+  </div><!--end row class-->
+</div><!--end container class-->
