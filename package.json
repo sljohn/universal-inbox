@@ -16,10 +16,12 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "del": "^2.2.1",
     "dotenv": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-jshint": "^2.0.1",
     "jshint": "^2.9.2",
+    "jshint-stylish": "^2.2.0",
     "mocha": "^2.5.3",
     "nodemon": "^1.9.2"
   },
@@ -27,7 +29,9 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "mocha",
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "postinstall": "./node_modules/bower/bin/bower install",
+    "upstream-rebase": "git pull --rebase upstream dev",
+    "deploy-local": "gulp lint && npm run upstream-rebase && heroku local web"
   },
   "engines": {
     "node": "5.9.1"
