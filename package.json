@@ -17,8 +17,11 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "dotenv": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.1",
+    "jshint": "^2.9.2",
     "mocha": "^2.5.3",
-    "nodemon": "*"
+    "nodemon": "^1.9.2"
   },
   "scripts": {
     "start": "node index.js",
