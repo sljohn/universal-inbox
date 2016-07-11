@@ -1,6 +1,7 @@
-const Twitter = require('twitter');
+const Twitter = require('Twitter');
 const path = require('path');
 
+console.log(process.env)
 const client = new Twitter({
   consumer_key: process.env.TWITTER_CONSUMER_KEY,
   consumer_secret: process.env.TWITTER_CONSUMER_SECRENT,
