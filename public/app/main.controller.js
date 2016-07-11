@@ -13,4 +13,14 @@ function MainController(TweetsFactory) {
   vm.username = 'janedone';
   vm.messageBody = 'Look what we have here!';
   vm.dateTime = new Date().toLocaleString();
+
+  // Saving this method when getTweets is a real
+  // promoise
+  // TweetsFactory.getTweets().then((data) => {
+  //   console.log('data: ', data);
+  // });
+
+  const tweets = TweetsFactory.getTweets();
+
+  console.log(tweets);
 }
