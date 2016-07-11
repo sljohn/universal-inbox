@@ -8,7 +8,7 @@ const expressValidator = require('express-validator');
 const db = require('./db/db');
 
 /*
-** Load local enviroment variables from .env file where secrets and keys are configured.
+** Load local environment variables from .env file where secrets and keys are configured.
 */
 if (!process.env.SESSION_SECRET) { // If it's undefined, then we're running locally
   const dotenv = require('dotenv');

@@ -1,4 +1,4 @@
-const Twitter = require('Twitter');
+const Twitter = require('twitter');
 const path = require('path');
 
 console.log(process.env)
