@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="universal-inbox">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,35 +8,25 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
- <title>Create a New Account</title>
+  <title>Universal Inbox</title>
 
-  <!-- Bootstrap Core CSS --><link href="./assets/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS --><link href="./assets/css/business-casual.css" rel="stylesheet">
+  <!-- Bootstrap Core CSS --><link href="./css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS --><link href="./css/business-casual.css" rel="stylesheet">
   <!-- Fonts -->
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
 </head>
-
-
 <body>
+  
+  <div ui-view></div>
 
-  <div class="container regBox">
-    <div class="row">
-      <div class="box">
-        <div class="col-lg-12 text-center">
-          <form>
-            <input type="text" value="Enter email address"></br></br>
-            <input type="text" value="Enter password"></br></br>
-            <input type="text" value="Confirm password"></br></br>
-            <button type="submit">Register</button>
-          </form>
-        </div><!--end col-lg-12 text-center class-->
-      </div><!--end box class-->
-    </div><!--end row class-->
-  </div><!--end container class-->
-
-
-  <!-- jQuery --><script src="./assets/js/jquery.js"></script>
-  <!-- Bootstrap Core JavaScript --><script src="./assets/js/bootstrap.min.js"></script>
+  <!-- jQuery --><script src="./js/jquery.js"></script>
+  <!-- Bootstrap Core JavaScript --><script src="./js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+  <script src="./app/router.js"></script>
+  <script src="./app/services/post.factory.js"></script>
+  <script src="./app/main.controller.js"></script>
+  <script src="./app.js"></script
 </body>
 </html>

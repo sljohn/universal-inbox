@@ -15,7 +15,7 @@ if (!process.env.SESSION_SECRET) { // If it's undefined, then we're running loca
   dotenv.load({ path: '.env' });
 }
 
-/*``
+/*
 ** Route Controllers
 */
 const homeController = require('./controllers/home');
