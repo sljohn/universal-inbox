@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const expressValidator = require('express-validator');
 
-//const db = require('./db/db');
+const db = require('./db/db');
 
 /*
 ** Load local environment variables from .env file where secrets and keys are configured.
@@ -49,7 +49,11 @@ app.use(express.static(path.join(__dirname, '../public')));
 ** App routes.
 */
 app.get('/', homeController.index);
-app.get('/api/twitter', twitterController.getTweets);
+app.get('/api/twitter', function(req, res) {
+  twitterController.findDbTweets({}).then(function(tweets) {
+    res.json(tweets);
+  })
+});
 
 const postRoutes = require('./routes/postRoutes');
 app.use('/api/posts', postRoutes);
