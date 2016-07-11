@@ -31,7 +31,7 @@
     "test": "mocha",
     "postinstall": "./node_modules/bower/bin/bower install",
     "upstream-rebase": "git pull --rebase upstream dev && gulp lint",
-    "deploy-local": "gulp lint && npm run upstream-rebase && heroku local web && echo 'Please go to localhost:5000 to make sure the site runs correctly'",
+    "deploy-local": "gulp lint && npm run upstream-rebase && echo 'Please go to localhost:5000 to make sure the site runs correctly' && heroku local web",
     "": ""
   },
   "engines": {
