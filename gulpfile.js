@@ -7,8 +7,18 @@ gulp.task('default', function () {
   // place code for your default task here
 });
 
-gulp.task('jshint', function () {
-  gulp.src('./server/controllers/*.js')
+gulp.task('lint', function () {
+  gulp.src([
+    './server/*.js',
+    './server/*/*.js',
+    './client/*.js',
+    './client/app/*.js',
+    './client/app/*/*.js',
+    './public/*.js',
+    './public/app/*.js',
+    './public/app/*/*.js',
+  ])
     .pipe(jshint())
-    .pipe(jshint.reporter('default'));
+    .pipe(jshint.reporter('jshint-stylish'))
+    .pipe(jshint.reporter('fail'));
 });

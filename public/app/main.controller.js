@@ -1,14 +1,14 @@
+'use strict';
+
 angular
   .module('universal-inbox.MainController', [])
-  .controller('MainController', MainController);
+  .controller('MainController', function () {
 
-MainController.$inject = ['TweetsFactory'];
+    const vm = this;
 
-function MainController(TweetsFactory) {
-  const vm = this;
+    vm.name = 'Jane';
+    vm.username = 'janedone';
+    vm.messageBody = 'Look what we have here!';
+    vm.dateTime = new Date().toLocaleString();
 
-  vm.name = 'Jane';
-  vm.username = 'janedone';
-  vm.messageBody = 'Look what we have here!';
-  vm.dateTime = new Date().toLocaleString();
-}
+  });
