@@ -11,7 +11,6 @@ function PostsFactory(/* $http */) {
 angular
   .module('universal-inbox.PostsFactory', [])
   .factory('PostsFactory', PostsFactory);
-
-// A different method to add dependency injection.
-PostsFactory.$inject = ['$http'];
-
+  
+  // A different method to add dependency injection.
+  PostsFactory.$inject = ['$http'];
