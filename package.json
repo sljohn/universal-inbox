@@ -29,7 +29,8 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "mocha",
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "postinstall": "./node_modules/bower/bin/bower install",
+    "upstream-rebase": "git pull --rebase upstream dev"
   },
   "engines": {
     "node": "5.9.1"
