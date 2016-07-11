@@ -30,7 +30,8 @@
     "dev": "nodemon index.js",
     "test": "mocha",
     "postinstall": "./node_modules/bower/bin/bower install",
-    "upstream-rebase": "git pull --rebase upstream dev"
+    "upstream-rebase": "git pull --rebase upstream dev",
+    "deploy-local": "gulp lint && npm run upstream-rebase && heroku local web"
   },
   "engines": {
     "node": "5.9.1"
