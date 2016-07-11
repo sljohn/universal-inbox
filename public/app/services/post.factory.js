@@ -1,6 +1,6 @@
 'use strict';
 
-function PostsFactory(/* $http */) {
+function PostsFactory($http) {
   function myCoolFnc() {
     // function body
   }
@@ -14,3 +14,4 @@ angular
 
 // A different method to add dependency injection.
 PostsFactory.$inject = ['$http'];
+
