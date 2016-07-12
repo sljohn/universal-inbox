@@ -32,4 +32,3 @@ angular
   .factory('logger', logger);
 
 logger.$inject = ['$log'];
-

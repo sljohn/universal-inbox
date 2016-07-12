@@ -11,4 +11,5 @@ angular
         templateUrl: 'app/partials/feed.html',
         controller: 'MainController as vm',
       });
+
   });
