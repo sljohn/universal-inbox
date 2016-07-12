@@ -17,8 +17,6 @@ function MainController(TweetsFactory) {
 
   const tweets = TweetsFactory.getTweets();
 
-  console.log(tweets);
-
   vm.tweets = TweetsFactory.getTweets();
 
   /*tweets.forEach(function(tweet) {
