@@ -8,13 +8,19 @@ let tweetSchema;
 {
   /* jshint camelcase: false */
   tweetSchema = mongoose.Schema({
-    id: mongoose.Schema.Types.ObjectId,
+    // _id: mongoose.Schema.Types.ObjectId,
+    id_str: {type: String, unique: true},
     created_at: String,
     text: String,
     user: {
-      handle: String,
-      fullname: String,
+      name: String,
+      screen_name: String,
+      profile_image_url_https: String,
+      url: String,
+      description: String,
+      id_str: String,
     },
+    completed: {type: Boolean, default: false}
   });
 }
 
