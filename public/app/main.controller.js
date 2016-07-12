@@ -11,7 +11,6 @@ function MainController(TweetsFactory) {
     vm.tweets = data;
   });
 
-
   //const tweets = TweetsFactory.getTweets();
 
   // vm.tweets = TweetsFactory.getTweets();
@@ -25,7 +24,6 @@ function MainController(TweetsFactory) {
     console.log('tweet.created_at: ', tweet.created_at);
     // console.log('tweet: ', tweet);
     // console.log('tweet: ', tweet);
-
 
   });*/
 
