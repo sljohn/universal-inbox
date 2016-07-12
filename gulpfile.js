@@ -30,11 +30,9 @@ gulp.task('lint', function () {
 
 gulp.task('concat', ['clean', 'lint'], () => {
   const stream = gulp.src([
-      './server/*.js',
-      './server/*/*.js',
-      './public/*.js',
-      './public/app/*.js',
       './public/app/*/*.js',
+      './public/app/*.js',
+      './public/*.js',
 
       //'./client/*.js',
       //'./client/app/*.js',
