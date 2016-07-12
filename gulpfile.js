@@ -43,8 +43,9 @@ gulp.task('concat', ['clean', 'lint'], () => {
     ])
     .pipe(concat('bundle.js'))
     .pipe(stripDebug())
-    .pipe(uglify())
-    .pipe(sourcemaps.write())
+
+    //.pipe(uglify()) // TODO: Get this working
+    //.pipe(sourcemaps.write()) // TODO: Get this working; what should the output be?
     .pipe(gulp.dest('./public/js/'));
 
   return stream;
