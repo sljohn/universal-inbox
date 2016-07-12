@@ -9,7 +9,7 @@ const stripDebug = require('gulp-strip-debug');
 const uglify = require('gulp-uglify');
 
 gulp.task('clean', function () {
-  return del(['public/dist']);
+  return del(['public/js']);
 });
 
 gulp.task('lint', function () {

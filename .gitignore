@@ -3,6 +3,9 @@ configUntracked.js
 .idea
 .env
 
+# Bundled js
+public/js/*.js
+
 # Workspace files
 .idea/workspace.xml
 .idea/shelf
