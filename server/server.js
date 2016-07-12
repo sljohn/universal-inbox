@@ -49,6 +49,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 ** App routes.
 */
 app.get('/', homeController.index);
+//TODO: fill empty object with username from the request
 app.get('/api/twitter', function(req, res) {
   twitterController.findDbTweets({}).then(function(tweets) {
     res.json(tweets);

@@ -24,11 +24,7 @@ function cacheTweets(username, sinceId) {
     } else {
       tweets = tweets.statuses;
       for (let t of tweets) {
-        const tweet = new dbTweet({
-                                    text: t.text, 
-                                    created_at: t.created_at,
-                                    user: {handle: t.user.screen_name, fullname:t.user.name}
-                                  })
+        const tweet = new dbTweet(t)
         tweet.save(function(err, tweet) {
           if (err) {
             console.log(err);
@@ -39,6 +35,7 @@ function cacheTweets(username, sinceId) {
   });
 };
 
+cacheTweets('makersquare')
 function findDbTweets(queryObj) {
   return dbTweet.find(queryObj).exec()
 }
