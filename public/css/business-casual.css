@@ -1,12 +1,7 @@
-/*!
- * Start Bootstrap - Business Casual Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
 body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: url('../img/ombre-flip.jpg') no-repeat center center fixed;
+    background-image: linear-gradient(gray, white);
+    background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -167,10 +162,11 @@ footer p {
         border: none;
         background: #fff;
         background: rgba(255,255,255,0.9);
+        height: 50px; /*height of navigation bar*/
     }
 
     .nav>li>a {
-        padding: 35px;
+        padding: 15px;
     }
 
     .navbar-nav>li>a {
