@@ -15,7 +15,7 @@ function MainController(TweetsFactory) {
   // });
 
 
-  const tweets = TweetsFactory.getTweets();
+  //const tweets = TweetsFactory.getTweets();
 
   vm.tweets = TweetsFactory.getTweets();
 
