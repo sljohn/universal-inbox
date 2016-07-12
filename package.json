@@ -30,7 +30,7 @@
     "dev": "nodemon index.js",
     "test": "mocha",
     "postinstall": "./node_modules/bower/bin/bower install",
-    "upstream-rebase": "gulp lint && echo '' && git pull --rebase upstream dev && echo '' && gulp lint",
+    "upstream-rebase": "gulp lint && echo && git pull --rebase upstream dev && echo && gulp lint",
     "deploy-local": "npm run upstream-rebase && echo CODE OVERLOAD CONTRIBUTOR: Please go to localhost:5000 to make sure the site runs correctly && heroku local web"
   },
   "engines": {
