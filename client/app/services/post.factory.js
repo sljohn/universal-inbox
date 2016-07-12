@@ -5,9 +5,7 @@ function PostsFactory(/* $http */) {
     // function body
   }
 
-  return {
-    myCoolFnc,
-  };
+  return { myCoolFnc };
 }
 
 angular
@@ -16,3 +14,4 @@ angular
 
 // A different method to add dependency injection.
 PostsFactory.$inject = ['$http'];
+
