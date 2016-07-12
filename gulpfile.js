@@ -43,6 +43,7 @@ gulp.task('concat', ['clean', 'lint'], () => {
     ])
     .pipe(concat('bundle.js'))
     .pipe(stripDebug())
+    .pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./public/js/'));
 
