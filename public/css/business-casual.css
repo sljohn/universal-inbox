@@ -201,3 +201,7 @@ footer p {
 input {
     width: 300px;
 }
+
+.inbox--filters{
+    border: 1px solid red;
+}

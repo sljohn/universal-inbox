@@ -26,10 +26,20 @@
         <li><a href="#">Logout</a></li>
       </ul>
     </div><!--end navbar zoptions-->
-  </container><!-- end container (for the navigation bar)-->
+  </div><!-- end container (for the navigation bar)-->
 </nav>
 
 <div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 inbox--filters">
+      <span><strong>Filters: </strong></span>
+      <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-default">Left</button>
+        <button type="button" class="btn btn-default">Middle</button>
+        <button type="button" class="btn btn-default">Right</button>
+      </div>
+    </div>
+  </div>
   <div class="row">
     <div class="col-md-6" ng-repeat="tweet in vm.tweets">
       <div class="panel panel-default">
@@ -48,7 +58,7 @@
           </p>
           <form>
             <div class="input-group">
-              <input type="text" class="form-control" value="@{{ tweet.user.name + ' ' }}" placeholder="Tweet...">
+              <input type="text" class="form-control" value="@{{ tweet.user.screen_name + ' ' }}" placeholder="Tweet...">
               <span class="input-group-btn">
                 <button class="btn btn-default" type="button">Tweet</button>
               </span>
