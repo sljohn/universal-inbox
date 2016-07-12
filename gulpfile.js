@@ -9,7 +9,7 @@ const stripDebug = require('gulp-strip-debug');
 const uglify = require('gulp-uglify');
 
 gulp.task('clean', function () {
-  return del(['public/dist']);
+  return del(['public/js']);
 });
 
 gulp.task('lint', function () {
@@ -43,8 +43,9 @@ gulp.task('concat', ['clean', 'lint'], () => {
     ])
     .pipe(concat('bundle.js'))
     .pipe(stripDebug())
-    .pipe(uglify())
-    .pipe(sourcemaps.write())
+
+    //.pipe(uglify()) // TODO: Get this working
+    //.pipe(sourcemaps.write()) // TODO: Get this working; what should the output be?
     .pipe(gulp.dest('./public/js/'));
 
   return stream;
