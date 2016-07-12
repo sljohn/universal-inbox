@@ -9,18 +9,34 @@ gulp.task('clean', function () {
 });
 
 gulp.task('concat', () => {
+  const stream = gulp.src([
+    './server/*.js',
+    './server/*/*.js',
+    './public/*.js',
+    './public/app/*.js',
+    './public/app/*/*.js',
+
+    //'./client/*.js',
+    //'./client/app/*.js',
+    //'./client/app/*/*.js',
+  ])
+    .pipe(concat('bundle.js'))
+    .pipe();
+
+  return stream;
 });
 
 gulp.task('lint', function () {
   const stream = gulp.src([
     './server/*.js',
     './server/*/*.js',
-    './client/*.js',
-    './client/app/*.js',
-    './client/app/*/*.js',
     './public/*.js',
     './public/app/*.js',
     './public/app/*/*.js',
+
+    //'./client/*.js',
+    //'./client/app/*.js',
+    //'./client/app/*/*.js',
   ])
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
