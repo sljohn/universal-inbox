@@ -37,10 +37,7 @@ function cacheTweets(username, sinceId) {
         //  continue;
         //}
 
-        tweet.save(function (error, tweet) {
-          console.log(error);
-          console.log(tweet);
-        });
+        tweet.save(errorCallback);
       }
     }
   });
