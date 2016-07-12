@@ -1,6 +1,6 @@
 'use strict';
 
-function PostsFactory($http) {
+function PostsFactory(/* $http */) {
   function myCoolFnc() {
     // function body
   }
