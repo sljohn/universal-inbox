@@ -1,5 +1,6 @@
 angular
   .module('universal-inbox', [
+    'angularMoment',
     'universal-inbox.router',
     'utility.logger',
     'universal-inbox.PostsFactory',
