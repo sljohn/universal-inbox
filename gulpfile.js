@@ -11,8 +11,8 @@ gulp.task('clean', function () {
 
 gulp.task('lint', function () {
   const stream = gulp.src([
-    './server/*.js',
     './server/*/*.js',
+    './server/*.js',
     './public/*.js',
     './public/app/*/*.js',
     './public/app/*.js',
