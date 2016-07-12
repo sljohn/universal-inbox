@@ -1,6 +1,8 @@
+'use strict';
+
 angular
   .module('universal-inbox.MainController', [])
-  .controller('MainController', function() {
+  .controller('MainController', function () {
 
     const vm = this;
 

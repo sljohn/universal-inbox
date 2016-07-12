@@ -1,3 +1,5 @@
+'use strict';
+
 const mongoose = require('mongoose');
 
 const DB_ADDRESS = process.env.MONGODB_URI || 'mongodb://localhost';

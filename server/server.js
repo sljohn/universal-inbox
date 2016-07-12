@@ -5,13 +5,15 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 const path = require('path');
 const expressValidator = require('express-validator');
-const db = require('./db/db');
+
+//const db = require('./db/db');
 
 /*
 ** Load local environment variables from .env file where secrets and keys are configured.
 */
+let dotenv;
 if (!process.env.SESSION_SECRET) { // If it's undefined, then we're running locally
-  const dotenv = require('dotenv');
+  dotenv = require('dotenv');
   dotenv.load({ path: '.env' });
 }
 

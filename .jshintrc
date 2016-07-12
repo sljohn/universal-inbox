@@ -58,5 +58,8 @@
    */
 
   // Suppress warnings about == null comparisons.
-  "eqnull": true
+  "eqnull": true,
+
+  // Notify jshint that some variables are created globally and don't need to be defined
+  "predef": [ "angular" ]
 }
