@@ -30,6 +30,9 @@ function cacheTweets(username, sinceId) {
       tweets = tweets.statuses;
       for (let t of tweets) {
         const tweet = new DbTweet(t);
+        if (DbTweet.findOne({id_str: t.id_str})) {
+          continue;
+        }
         tweet.save(errorCallback);
       }
     }
