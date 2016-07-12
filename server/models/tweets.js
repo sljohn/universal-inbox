@@ -8,7 +8,7 @@ let tweetSchema;
 {
   /* jshint camelcase: false */
   tweetSchema = mongoose.Schema({
-    // _id: mongoose.Schema.Types.ObjectId,
+    mongo_id: mongoose.Schema.Types.ObjectId,
     id_str: {type: String, unique: true},
     created_at: String,
     text: String,
