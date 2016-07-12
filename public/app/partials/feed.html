@@ -27,8 +27,8 @@
 </nav>
 
 <div class="container">
-  <div class="row well inbox--filters">
-    <div class="col-md-6 inbox--filter-buttons inbox--filter-component text-center">
+  <div class="row well inbox__filters">
+    <div class="col-md-6 inbox--filter-buttons inbox__filter-component text-center">
       <span><strong>Filters: </strong></span>
       <div class="btn-group" role="group" aria-label="Filter tasks by completed status">
         <button type="button" class="btn btn-default"
@@ -45,7 +45,7 @@
         <!--<button type="button" class="btn btn-default active">Facebook</button>-->
       <!--</div>-->
     </div>
-    <div class="col-md-6 inbox--filter-textbox inbox--filter-component text-center">
+    <div class="col-md-6 inbox--filter-textbox inbox__filter-component text-center">
       <span><strong>Search: </strong></span>
       <input type="text" class="form-control" ng-model="vm.postsSearch">
     </div>
@@ -62,7 +62,7 @@
           <span am-time-ago="tweet.created_at | amDateFormat:'dd MMM DD HH:mm:ss ZZ YYYY'"></span>
           <p>
             <a href="https://twitter.com/intent/user?user_id={{ tweet.user.id }}" target="_blank">
-              <img src="{{ tweet.user.profile_image_url_https }}" class="img-thumbnail" title="{{ tweet.user.description }}">
+              <img src="{{ tweet.user.profile_image_url_https }}" class="img-thumbnail pull-left post__user__thumbnail" title="{{ tweet.user.description }}">
             </a>
             {{ tweet.text }}
           </p>

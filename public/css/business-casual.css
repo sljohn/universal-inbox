@@ -95,9 +95,8 @@ hr {
   border: #999999 solid 1px;
 }
 
-.img-left {
-  float: none;
-  margin: 0 auto 0;
+.post__user__thumbnail{
+  margin-right: 10px;
 }
 
 footer {
@@ -126,11 +125,6 @@ footer p {
 
   .top-divider {
     margin-top: 0;
-  }
-
-  .img-left {
-    float: left;
-    margin-right: 25px;
   }
 
   .address-bar {
@@ -202,7 +196,7 @@ input {
   width: 300px;
 }
 
-.inbox--filters {
+.inbox__filters {
   padding: 0;
   /*margin-bottom: 20px;*/
   /*-webkit-border-radius: 5px;*/
@@ -211,12 +205,12 @@ input {
   /*background-color: #eee;*/
 }
 
-.inbox--filter-component{
+.inbox__filter-component{
   margin: 10px 0 10px 0;
   /*border: 1px solid blue;*/
 }
 
-.inbox--filters input[type=text]{
+.inbox__filters input[type=text]{
   width: 200px;
   display: inline-block;
 }
