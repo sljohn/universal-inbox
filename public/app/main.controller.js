@@ -3,21 +3,18 @@
 function MainController(TweetsFactory) {
   const vm = this;
 
-  vm.name = 'Jane';
-  vm.username = 'janedone';
-  vm.messageBody = 'Look what we have here!';
-  vm.dateTime = new Date().toLocaleString();
+  vm.tweets = [];
 
   // Saving this method when getTweets is a real
   // promise.
-  // TweetsFactory.getTweets().then((data) => {
-  //   console.log('data: ', data);
-  // });
+  TweetsFactory.getTweets().then((data) => {
+    vm.tweets = data;
+  });
 
 
   //const tweets = TweetsFactory.getTweets();
 
-  vm.tweets = TweetsFactory.getTweets();
+  // vm.tweets = TweetsFactory.getTweets();
 
   /*tweets.forEach(function(tweet) {
     console.log('tweet.text: ', tweet.text);
