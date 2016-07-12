@@ -8,6 +8,9 @@ gulp.task('clean', function () {
   return del(['public/dist']);
 });
 
+gulp.task('concat', () => {
+});
+
 gulp.task('lint', function () {
   const stream = gulp.src([
     './server/*.js',

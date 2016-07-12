@@ -1,11 +1,5 @@
 'use strict';
 
-angular
-  .module('universal-inbox.MainController', [])
-  .controller('MainController', MainController);
-
-MainController.$inject = ['TweetsFactory'];
-
 function MainController(TweetsFactory) {
   const vm = this;
 
@@ -21,9 +15,7 @@ function MainController(TweetsFactory) {
   // });
 
 
-  const tweets = TweetsFactory.getTweets();
-
-  console.log(tweets);
+  //const tweets = TweetsFactory.getTweets();
 
   vm.tweets = TweetsFactory.getTweets();
 
@@ -41,3 +33,10 @@ function MainController(TweetsFactory) {
   });*/
 
 }
+
+angular
+  .module('universal-inbox.MainController', [])
+  .controller('MainController', MainController);
+
+MainController.$inject = ['TweetsFactory'];
+
