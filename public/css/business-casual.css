@@ -210,3 +210,8 @@ input {
   /*border-radius: 5px;*/
   /*background-color: #eee;*/
 }
+
+.inbox--filters input[type=text]{
+  width: 200px;
+  display: inline-block;
+}
