@@ -1,7 +1,6 @@
 'use strict';
 const Twitter = require('twitter');
-const path = require('path');
-const dbTweet = require('../models/tweets.js');
+const DbTweet = require('../models/tweets.js');
 
 let client;
 {
@@ -13,31 +12,33 @@ let client;
   });
 }
 
+function errorCallback (err) {
+  if (err) {
+    console.log(err);
+  }
+}
+
 function cacheTweets(username, sinceId) {
   //prepend all usernames with %40, replacing the @ symbol if provided
   username = username.replace(/^(@|%40)?/, '%40');
   const query = { q: username, since_id: sinceId };
   
-  client.get('search/tweets', query, function (error, tweets, response) {
+  client.get('search/tweets', query, function (error, tweets) {
     if (error) {
       console.log(error);
     } else {
       tweets = tweets.statuses;
       for (let t of tweets) {
-        const tweet = new dbTweet(t)
-        tweet.save(function(err, tweet) {
-          if (err) {
-            console.log(err);
-          }
-        })
+        const tweet = new DbTweet(t);
+        tweet.save(errorCallback);
       }
     }
   });
-};
+}
 
-cacheTweets('makersquare')
+cacheTweets('makersquare');
 function findDbTweets(queryObj) {
-  return dbTweet.find(queryObj).exec()
+  return DbTweet.find(queryObj).exec();
 }
 
 module.exports.cacheTweets = cacheTweets;

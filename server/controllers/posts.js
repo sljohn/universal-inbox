@@ -8,6 +8,6 @@ exports.getAllPosts = (req, res) => {
     if (tweets.length) {
       res.json(tweets);
     }
-   })
+   });
 };
 
