@@ -27,18 +27,33 @@ function MainController(TweetsFactory) {
    // console.log('tweet: ', tweet);
 
    });*/
+
   //</editor-fold>
 
-  //<editor-fold desc="Filter by completed posts">
+  //<editor-fold desc="Filter posts by completed">
   vm.viewCompleted = false;
 
   vm.matchesCompletedFilter = function (post) {
     return post.completedByUser ? vm.viewCompleted : !vm.viewCompleted;
   };
 
-  //vm.applyCompletedFilter = function (filterStr) {
-  //
-  //}
+  //</editor-fold>
+
+  //<editor-fold desc="Mark post completed/uncompleted">
+  vm.updateCompletedStatus = function (status, post) {
+    post.completedByUser = (status === 'completed') ? true : false;
+
+    //TweetsFactory.updateCompletedStatus(status, post.id_str)
+    //  .then(function () {
+    //    post.completedByUser = (status === 'completed') ? true : false;
+    //  })
+    //  .catch(function (err) {
+    //    console.error('Failed to update post status. Error:', err);
+    //
+    //    // TODO: Some sort of error handling
+    //  });
+  };
+
   //</editor-fold>
 }
 

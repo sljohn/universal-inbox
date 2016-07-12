@@ -9,7 +9,7 @@ let tweetSchema;
   /* jshint camelcase: false */
   tweetSchema = mongoose.Schema({
     mongo_id: mongoose.Schema.Types.ObjectId,
-    id_str: {type: String, unique: true},
+    id_str: { type: String, unique: true },
     created_at: String,
     text: String,
     user: {
@@ -20,7 +20,7 @@ let tweetSchema;
       description: String,
       id_str: String,
     },
-    completed: {type: Boolean, default: false}
+    completed: { type: Boolean, default: false },
   });
 }
 

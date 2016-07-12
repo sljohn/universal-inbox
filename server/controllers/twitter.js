@@ -12,7 +12,7 @@ let client;
   });
 }
 
-function errorCallback (err) {
+function errorCallback(err) {
   if (err) {
     console.log(err);
   }
@@ -22,17 +22,21 @@ function cacheTweets(username, sinceId) {
   //prepend all usernames with %40, replacing the @ symbol if provided
   username = username.replace(/^(@|%40)?/, '%40');
   const query = { q: username, since_id: sinceId };
-  
+
   client.get('search/tweets', query, function (error, tweets) {
     if (error) {
-      console.log(error);
+      console.log('Error retrieving tweets: ', error);
     } else {
+      //console.log('Tweets returned from Twitter module: ', tweets);
       tweets = tweets.statuses;
       for (let t of tweets) {
         const tweet = new DbTweet(t);
-        if (DbTweet.findOne({id_str: t.id_str})) {
-          continue;
-        }
+
+        //if (DbTweet.findOne({id_str: t.id_str})) {
+        //  //console.log("skipping", t)
+        //  continue;
+        //}
+
         tweet.save(errorCallback);
       }
     }
