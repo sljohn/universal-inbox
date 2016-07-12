@@ -21,7 +21,6 @@ gulp.task('lint', function () {
     './public/*.js',
     './public/app/*.js',
     './public/app/*/*.js',
-
   ])
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
