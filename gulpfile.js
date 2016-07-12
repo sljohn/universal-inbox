@@ -3,27 +3,10 @@
 const gulp = require('gulp');
 const jshint = require('gulp-jshint');
 const del = require('del');
+const concat = require('gulp-concat');
 
 gulp.task('clean', function () {
   return del(['public/dist']);
-});
-
-gulp.task('concat', () => {
-  const stream = gulp.src([
-    './server/*.js',
-    './server/*/*.js',
-    './public/*.js',
-    './public/app/*.js',
-    './public/app/*/*.js',
-
-    //'./client/*.js',
-    //'./client/app/*.js',
-    //'./client/app/*/*.js',
-  ])
-    .pipe(concat('bundle.js'))
-    .pipe();
-
-  return stream;
 });
 
 gulp.task('lint', function () {
@@ -45,4 +28,24 @@ gulp.task('lint', function () {
   return stream;
 });
 
-gulp.task('default', ['clean', 'lint']);
+gulp.task('concat', ['clean', 'lint'], () => {
+  const stream = gulp.src([
+      './server/*.js',
+      './server/*/*.js',
+      './public/*.js',
+      './public/app/*.js',
+      './public/app/*/*.js',
+
+      //'./client/*.js',
+      //'./client/app/*.js',
+      //'./client/app/*/*.js',
+    ])
+    .pipe(concat('bundle.js'))
+    .pipe(gulp.dest('./public/js/'));
+
+  return stream;
+});
+
+gulp.task('build', ['concat']);
+
+gulp.task('default', ['build']);
