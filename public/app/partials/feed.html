@@ -55,14 +55,14 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title">
-            <a href="https://twitter.com/intent/user?user_id={{ tweet.user.id }}" target="_blank">{{ tweet.user.name }} <small>@{{ tweet.user.screen_name }}</small></a>
+            <a href="https://twitter.com/intent/user?user_id={{ tweet.user.id_str }}" target="_blank">{{ tweet.user.name }} <small>@{{ tweet.user.screen_name }}</small></a>
           </h3>
         </div>
         <div class="panel-body">
           <span am-time-ago="tweet.created_at | amDateFormat:'dd MMM DD HH:mm:ss ZZ YYYY'"></span>
           <p>
-            <a href="https://twitter.com/intent/user?user_id={{ tweet.user.id }}" target="_blank">
-              <img src="{{ tweet.user.profile_image_url_https }}" class="img-thumbnail pull-left post__user__thumbnail" title="{{ tweet.user.description }}">
+            <a href="https://twitter.com/intent/user?user_id={{ tweet.user.id_str }}" target="_blank">
+              <img src="{{ tweet.user.profile_image_url_https }}" class="img-thumbnail" title="{{ tweet.user.description }}">
             </a>
             {{ tweet.text }}
           </p>

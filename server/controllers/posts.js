@@ -5,7 +5,11 @@ const twitter = require('./twitter.js');
 exports.getAllPosts = (req, res) => {
    twitter.cacheTweets('makersquare'); //TODO: don't hardcode username
    twitter.findTweets({}).then(function(tweets) {
-    res.json(tweets);
+    if (tweets.length) {
+      res.json(tweets);
+    } else {
+      res.send(require('../db/dummyTweets.json'));
+    }
    })
 };
 
