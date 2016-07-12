@@ -21,6 +21,7 @@ if (!process.env.SESSION_SECRET) { // If it's undefined, then we're running loca
 ** Route Controllers
 */
 const homeController = require('./controllers/home');
+const twitterController = require('./controllers/twitter');
 
 /*
 ** Create Express server.
@@ -48,6 +49,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 ** App routes.
 */
 app.get('/', homeController.index);
+app.get('/api/twitter', twitterController.getTweets);
 
 const postRoutes = require('./routes/postRoutes');
 app.use('/api/posts', postRoutes);
