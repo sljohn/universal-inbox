@@ -14,8 +14,8 @@ gulp.task('lint', function () {
     './server/*.js',
     './server/*/*.js',
     './public/*.js',
-    './public/app/*.js',
     './public/app/*/*.js',
+    './public/app/*.js',
 
     //'./client/*.js',
     //'./client/app/*.js',
