@@ -29,12 +29,13 @@ function cacheTweets(username, sinceId) {
     } else {
       //console.log('Tweets returned from Twitter module: ', tweets);
       tweets = tweets.statuses;
+      DbTweet.find().exec(function(err, cachedTweets) {console.log('tweets is', cachedTweets)});
       for (let t of tweets) {
         //const tweet = new DbTweet(t);
         //tweet.save(errorCallback);
 
-        DbTweet.findOneAndUpdate({ id_str: t.id_str }, t, { upsert: true })
-          .exec(errorCallback);
+        // DbTweet.findOneAndUpdate({ id_str: t.id_str }, t, { upsert: true })
+        //   .exec(errorCallback);
 
         //if (DbTweet.findOne({id_str: t.id_str})) {
         //  //console.log("skipping", t)
@@ -53,3 +54,4 @@ function findDbTweets(queryObj) {
 
 module.exports.cacheTweets = cacheTweets;
 module.exports.findDbTweets = findDbTweets;
+module.exports.client = client;
