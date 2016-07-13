@@ -1,11 +1,15 @@
 'use strict';
 
-function PostsFactory(/* $http */) {
-  function myCoolFnc() {
-    // function body
+function PostsFactory($http) {
+  function myFunc() {
+    return $http({
+      method: '',
+      url: '',
+      data: {},
+    });
   }
 
-  return { myCoolFnc };
+  return { myFunc };
 }
 
 angular

@@ -4,9 +4,12 @@ const gulp = require('gulp');
 const jshint = require('gulp-jshint');
 const del = require('del');
 const concat = require('gulp-concat');
+const sourcemaps = require('gulp-sourcemaps');
+const stripDebug = require('gulp-strip-debug');
+const uglify = require('gulp-uglify');
 
 gulp.task('clean', function () {
-  return del(['public/dist']);
+  return del(['public/js']);
 });
 
 gulp.task('lint', function () {
@@ -39,6 +42,10 @@ gulp.task('concat', ['clean', 'lint'], () => {
       //'./client/app/*/*.js',
     ])
     .pipe(concat('bundle.js'))
+    .pipe(stripDebug())
+
+    //.pipe(uglify()) // TODO: Get this working
+    //.pipe(sourcemaps.write()) // TODO: Get this working; what should the output be?
     .pipe(gulp.dest('./public/js/'));
 
   return stream;

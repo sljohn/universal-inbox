@@ -1,5 +1,5 @@
-<div class="brand">LOGOUT</div>
-<!--<div class="address-bar">3481 Melrose Place | Beverly Hills, CA 90210 | 123.456.7890</div> -->
+<!--<div class="brand">LOGOUT</div>
+<div class="address-bar">3481 Melrose Place | Beverly Hills, CA 90210 | 123.456.7890</div> -->
 
 <!-- Navigation -->
 <nav class="navbar navbar-default" role="navigation">
@@ -19,37 +19,76 @@
     <!-- Navbar options -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#">All New Posts</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Completed</a></li>
+        <li><a href="#">Inbox</a></li>
+        <li><a href="#">Logout</a></li>
       </ul>
     </div><!--end navbar zoptions-->
-  </container><!-- end container (for the navigation bar)-->
+  </div><!-- end container (for the navigation bar)-->
 </nav>
 
 <div class="container">
+  <div class="row well inbox__filters">
+    <div class="col-md-6 inbox--filter-buttons inbox__filter-component text-center">
+      <span><strong>Filters: </strong></span>
+      <div class="btn-group" role="group" aria-label="Filter tasks by completed status">
+        <button type="button" class="btn btn-default"
+                ng-class="vm.viewCompleted ? '' : 'active'"
+                ng-click="vm.viewCompleted = false">New</button>
+        <button type="button" class="btn btn-default"
+                ng-class="vm.viewCompleted ? 'active' : ''"
+                ng-click="vm.viewCompleted = true">Completed</button>
+      </div>
+      <!--&nbsp;&nbsp;-->
+      <!--<div class="btn-group" role="group" aria-label="Filter tasks by source">-->
+        <!--<button type="button" class="btn btn-default active">All sources</button>-->
+        <!--<button type="button" class="btn btn-default active">Twitter</button>-->
+        <!--<button type="button" class="btn btn-default active">Facebook</button>-->
+      <!--</div>-->
+    </div>
+    <div class="col-md-6 inbox--filter-textbox inbox__filter-component text-center">
+      <span><strong>Search: </strong></span>
+      <input type="text" class="form-control" ng-model="vm.postsSearch">
+    </div>
+  </div>
   <div class="row">
-    <div class="col-md-6" ng-repeat="tweet in vm.tweets">
+    <div class="col-md-6" ng-repeat="tweet in vm.tweets | filter: vm.matchesCompletedFilter | filter: vm.postsSearch">
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title">
-            <a href="https://twitter.com/intent/user?user_id={{ tweet.user.id }}" target="_blank">{{ tweet.user.name }} <small>@{{ tweet.user.screen_name }}</small></a>
+            <a href="https://twitter.com/intent/user?user_id={{ tweet.user.id_str }}" target="_blank">
+              {{ tweet.user.name }}
+              <small>@{{ tweet.user.screen_name }}</small>
+            </a>
           </h3>
         </div>
         <div class="panel-body">
-          <span am-time-ago="tweet.created_at | amDateFormat:'dd MMM DD HH:mm:ss ZZ YYYY'"></span>
+          <div class="clearfix">
+            <span am-time-ago="tweet.created_at | amDateFormat:'dd MMM DD HH:mm:ss ZZ YYYY'"></span>
+            <span class="pull-right">
+              <button class="btn btn-primary btn-sm"
+                      ng-click="vm.updateCompletedStatus('completed',tweet)"
+                      ng-hide="tweet.completedByUser">
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Done
+              </button>
+              <button class="btn btn-primary btn-sm"
+                      ng-click="vm.updateCompletedStatus('reopen',tweet)"
+                      ng-show="tweet.completedByUser">
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Reopen
+              </button>
+            </span>
+            <div class="clearfix"></div>
+          </div>
           <p>
-            <a href="https://twitter.com/intent/user?user_id={{ tweet.user.id }}" target="_blank">
+            <a href="https://twitter.com/intent/user?user_id={{ tweet.user.id_str }}" target="_blank">
               <img src="{{ tweet.user.profile_image_url_https }}" class="img-thumbnail" title="{{ tweet.user.description }}">
             </a>
             {{ tweet.text }}
           </p>
           <form>
             <div class="input-group">
-              <input type="text" class="form-control" value="@{{ tweet.user.name + ' ' }}" placeholder="Tweet...">
+              <input type="text" class="form-control" value="@{{ tweet.user.screen_name + ' ' }}" placeholder="Tweet...">
               <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Tweet</button>
+                <button ng-click="vm.replyTweet($index)" class="btn btn-default" type="button">Tweet</button>
               </span>
             </div>
           </form>
