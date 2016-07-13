@@ -30,14 +30,17 @@ function cacheTweets(username, sinceId) {
       //console.log('Tweets returned from Twitter module: ', tweets);
       tweets = tweets.statuses;
       for (let t of tweets) {
-        const tweet = new DbTweet(t);
+        //const tweet = new DbTweet(t);
+        //tweet.save(errorCallback);
+
+        DbTweet.findOneAndUpdate({ id_str: t.id_str }, t, { upsert: true })
+          .exec(errorCallback);
 
         //if (DbTweet.findOne({id_str: t.id_str})) {
         //  //console.log("skipping", t)
         //  continue;
         //}
 
-        tweet.save(errorCallback);
       }
     }
   });

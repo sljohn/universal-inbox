@@ -20,7 +20,7 @@ let tweetSchema;
       description: String,
       id_str: String,
     },
-    completed: { type: Boolean, default: false },
+    completedByUser: { type: Boolean, default: false },
   });
 }
 
