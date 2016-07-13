@@ -1,15 +1,15 @@
 'use strict';
 
 function PostsFactory($http) {
-  function updateCompletedStatus(status, postId) {
+  function myFunc() {
     return $http({
-      method: 'PUT',
-      url: '/api/posts/' + postId,
-      data: { status },
+      method: '',
+      url: '',
+      data: {},
     });
   }
 
-  return { updateCompletedStatus };
+  return { myFunc };
 }
 
 angular

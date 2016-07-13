@@ -40,18 +40,22 @@ function MainController(TweetsFactory) {
   //</editor-fold>
 
   //<editor-fold desc="Mark post completed/uncompleted">
-  vm.updateCompletedStatus = function (status, post) {
-    post.completedByUser = (status === 'completed') ? true : false;
+  vm.updateCompletedStatus = function (completedStatus, post) {
+    // Version that works without connecting to the database:
+    //post.completedByUser = (status === 'completed');
 
-    //TweetsFactory.updateCompletedStatus(status, post.id_str)
-    //  .then(function () {
-    //    post.completedByUser = (status === 'completed') ? true : false;
-    //  })
-    //  .catch(function (err) {
-    //    console.error('Failed to update post status. Error:', err);
-    //
-    //    // TODO: Some sort of error handling
-    //  });
+    {
+      /* jshint camelcase: false */
+      TweetsFactory.updateCompletedStatus(completedStatus, post.id_str)
+        .then(function () {
+          post.completedByUser = (completedStatus === 'completed');
+        })
+        .catch(function (err) {
+          console.error('Failed to update post status. Error:', err);
+
+          // TODO: Some sort of error handling
+        });
+    }
   };
 
   //</editor-fold>
