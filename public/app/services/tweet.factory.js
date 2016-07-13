@@ -6,7 +6,7 @@ function TweetsFactory($http, logger) {
     return $http({
       method: 'GET',
       url: '/api/twitter',
-    }).then(resp => resp.data, err => logger.logError(resp));
+    }).then(resp => resp.data, err => logger.logError(err));
   }
 
   function updateCompletedStatus(completedStatus, postId) {
