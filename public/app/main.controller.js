@@ -66,4 +66,3 @@ angular
   .controller('MainController', MainController);
 
 MainController.$inject = ['TweetsFactory'];
-
