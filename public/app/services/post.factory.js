@@ -14,4 +14,3 @@ angular
 
 // A different method to add dependency injection.
 PostsFactory.$inject = ['$http'];
-
