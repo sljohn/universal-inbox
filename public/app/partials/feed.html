@@ -19,13 +19,9 @@
     <!-- Navbar options -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#"><i class="fa fa-inbox" aria-hidden="true"></i> Universal Inbox</a></li>
-        <!-- <li>
-          <a href="#">Logout</a>
-        </li> -->
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
-        </ul>
+        <li><a href="#">Inbox</a></li>
+        <li ng-click="vm.checkAuth()"><a href="#">Connect Gmail</a></li>
+        <li><a href="#">Logout</a></li>
       </ul>
     </div><!--end navbar zoptions-->
   </div><!-- end container (for the navigation bar)-->
