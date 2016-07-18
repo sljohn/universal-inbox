@@ -64,7 +64,7 @@ app.use('/api/posts', postRoutes);
 const Gmail = require('node-gmail-api');
 const gmail = new Gmail(process.env.GMAIL_ACCESS_TOKEN);
 const search = gmail.messages('label:inbox',
-  { max: 1, fields: ['id', 'internalDate', 'labelIds', 'payload', 'snippet'] });
+  { max: 100, fields: ['id', 'internalDate', 'labelIds', 'payload', 'snippet'] });
 
 search.on('data', function (data) {
   const msg = {
