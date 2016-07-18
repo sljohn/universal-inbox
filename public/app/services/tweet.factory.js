@@ -9,18 +9,7 @@ function TweetsFactory($http, logger) {
     }).then(resp => resp.data, err => logger.logError(err));
   }
 
-  function updateCompletedStatus(completedStatus, postId) {
-    return $http({
-      method: 'PUT',
-      url: '/api/posts/' + postId,
-      data: {
-        changeRequested: 'completedStatus',
-        newValue:        completedStatus,
-      },
-    });
-  }
-
-  return { getTweets, updateCompletedStatus };
+  return { getTweets };
 }
 
 angular

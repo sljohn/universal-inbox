@@ -1,6 +1,6 @@
 'use strict';
 
-function MainController($window, TweetsFactory) {
+function MainController($window, TweetsFactory, GmailFactory, PostsFactory) {
   const vm = this;
   const gapi = $window.gapi;
 
@@ -29,7 +29,7 @@ function MainController($window, TweetsFactory) {
 
     {
       /* jshint camelcase: false */
-      TweetsFactory.updateCompletedStatus(completedStatus, post.id_str)
+      PostsFactory.updateCompletedStatus(completedStatus, post.id_str)
         .then(function () {
           post.completedByUser = (completedStatus === 'completed');
         })
@@ -123,4 +123,4 @@ angular
   .module('universal-inbox.MainController', [])
   .controller('MainController', MainController);
 
-MainController.$inject = ['$window', 'TweetsFactory'];
+MainController.$inject = ['$window', 'TweetsFactory', 'GmailFactory', 'PostsFactory'];
