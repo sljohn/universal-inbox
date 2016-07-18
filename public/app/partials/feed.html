@@ -56,49 +56,107 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-6" ng-repeat="tweet in vm.tweets | filter: vm.matchesCompletedFilter | filter: vm.postsSearch">
-      <div class="panel panel-default animated fadeIn" set-height>
-        <div class="panel-heading">
-          <h3 class="panel-title">
-            <a href="https://twitter.com/intent/user?user_id={{ tweet.user.id_str }}" target="_blank">
-              {{ tweet.user.name }}
-              <small>@{{ tweet.user.screen_name }}</small>
-            </a>
-          </h3>
-        </div>
-        <div class="panel-body">
-          <div class="clearfix">
-            <span am-time-ago="tweet.created_at | amDateFormat:'dd MMM DD HH:mm:ss ZZ YYYY'"></span>
-            <span class="pull-right">
-              <button class="btn btn-primary btn-sm"
-                      ng-click="vm.updateCompletedStatus('completed',tweet)"
-                      ng-hide="tweet.completedByUser">
-                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Complete
-              </button>
-              <button class="btn btn-primary btn-sm"
-                      ng-click="vm.updateCompletedStatus('reopen',tweet)"
-                      ng-show="tweet.completedByUser">
-                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Reopen
-              </button>
-            </span>
-            <div class="clearfix"></div>
-          </div>
-          <p>
-            <a href="https://twitter.com/intent/user?user_id={{ tweet.user.id_str }}" target="_blank">
-              <img src="{{ tweet.user.profile_image_url_https }}" class="img-thumbnail" title="{{ tweet.user.description }}">
-            </a>
-            {{ tweet.text }}
-          </p>
-          <form>
-            <div class="input-group">
-              <input type="text" class="form-control" value="@{{ tweet.user.screen_name + ' ' }}" placeholder="Tweet...">
-              <span class="input-group-btn">
-                <button ng-click="vm.replyTweet($index)" class="btn btn-default" type="button"><i class="fa fa-twitter" aria-hidden="true"></i> Tweet</button>
-              </span>
+    <uib-tabset active="active">
+      <uib-tab index="0">
+        <uib-tab-heading>
+          <i class="fa fa-twitter" aria-hidden="true"></i> Twitter
+        </uib-tab-heading>
+        <div class="col-md-6" ng-repeat="tweet in vm.tweets | filter: vm.matchesCompletedFilter | filter: vm.postsSearch">
+          <div class="panel panel-default animated fadeIn" set-height>
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <a href="https://twitter.com/intent/user?user_id={{ tweet.user.id_str }}" target="_blank">
+                  {{ tweet.user.name }}
+                  <small>@{{ tweet.user.screen_name }}</small>
+                </a>
+              </h3>
             </div>
-          </form>
+            <div class="panel-body">
+              <div class="clearfix">
+                <span am-time-ago="tweet.created_at | amDateFormat:'dd MMM DD HH:mm:ss ZZ YYYY'"></span>
+                <span class="pull-right">
+                  <button class="btn btn-primary btn-sm"
+                          ng-click="vm.updateCompletedStatus('completed',tweet)"
+                          ng-hide="tweet.completedByUser">
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Complete
+                  </button>
+                  <button class="btn btn-primary btn-sm"
+                          ng-click="vm.updateCompletedStatus('reopen',tweet)"
+                          ng-show="tweet.completedByUser">
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Reopen
+                  </button>
+                </span>
+                <div class="clearfix"></div>
+              </div>
+              <p>
+                <a href="https://twitter.com/intent/user?user_id={{ tweet.user.id_str }}" target="_blank">
+                  <img src="{{ tweet.user.profile_image_url_https }}" class="img-thumbnail" title="{{ tweet.user.description }}">
+                </a>
+                {{ tweet.text }}
+              </p>
+              <form>
+                <div class="input-group">
+                  <input type="text" class="form-control" value="@{{ tweet.user.screen_name + ' ' }}" placeholder="Tweet...">
+                  <span class="input-group-btn">
+                    <button ng-click="vm.replyTweet($index)" class="btn btn-default" type="button"><i class="fa fa-twitter" aria-hidden="true"></i> Tweet</button>
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </uib-tab>
+      <uib-tab index="1" heading="Gmail">
+        <uib-tab-heading>
+          <i class="fa fa-google-plus" aria-hidden="true"></i> Gmail
+        </uib-tab-heading>
+        <div class="col-md-6" ng-repeat="email in vm.emails | filter: vm.matchesCompletedFilter | filter: vm.postsSearch">
+          <div class="panel panel-default animated fadeIn" set-height>
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <a href="https://mail.google.com/mail/u/0/#inbox/{{ email.id }}" target="_blank">
+                  {{ email.From }}
+                  <small>{{ email.Subject }}</small>
+                </a>
+              </h3>
+            </div>
+            <div class="panel-body">
+              <div class="clearfix">
+                <span am-time-ago="email.Date | amDateFormat:'dd MMM DD HH:mm:ss ZZ YYYY'"></span>
+                <span class="pull-right">
+                  <button class="btn btn-primary btn-sm"
+                          ng-click="vm.updateCompletedStatus('completed',email)"
+                          ng-hide="email.completedByUser">
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Complete
+                  </button>
+                  <button class="btn btn-primary btn-sm"
+                          ng-click="vm.updateCompletedStatus('reopen',email)"
+                          ng-show="email.completedByUser">
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Reopen
+                  </button>
+                </span>
+                <div class="clearfix"></div>
+              </div>
+              <p>
+                <a href="https://mail.google.com/mail/u/0/#inbox/{{ email.id }}" target="_blank">
+                  <img src="{{ email.user.profile_image_url_https }}" class="img-thumbnail" title="{{ email.user.description }}">
+                </a>
+                {{ email.snippet }}
+              </p>
+              <form>
+                <div class="input-group">
+                  <input type="text" class="form-control" value="" placeholder="Reply...">
+                  <span class="input-group-btn">
+                    <button ng-click="vm.replyTweet($index)" class="btn btn-default" type="button"><i class="fa fa-google" aria-hidden="true"></i> Reply</button>
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </uib-tab>
+    </uib-tabset>
+
+        
   </div>
 </div>

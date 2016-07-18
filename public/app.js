@@ -4,6 +4,7 @@ angular
     'utility.logger',
     'directive.setHeight',
     'ui.router',
+    'ui.bootstrap',
     'universal-inbox.router',
     'universal-inbox.AuthController',
     'universal-inbox.PostsFactory',
