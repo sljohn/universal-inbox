@@ -64,10 +64,13 @@ app.use('/api/posts', postRoutes);
 const Gmail = require('node-gmail-api');
 const gmail = new Gmail(process.env.GMAIL_ACCESS_TOKEN);
 const search = gmail.messages('label:inbox',
-  { max: 10, fields: ['id', 'internalDate', 'labelIds', 'payload'] });
+  { max: 100, fields: ['id', 'internalDate', 'labelIds', 'payload', 'snippet'] });
 
 search.on('data', function (data) {
-  const msg = { id: data.id };
+  const msg = {
+    id: data.id,
+    snippet: data.snippet,
+  };
 
   for (let i = 0; i < data.payload.headers.length; i++) {
     const headerName = data.payload.headers[i].name;

@@ -1,9 +1,8 @@
 'use strict';
 
 function AuthController() {
-  const vm = this;
 
-  
+  //const vm = this;
 }
 
 angular
