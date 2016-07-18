@@ -1,8 +1,14 @@
 'use strict';
+/* jshint unused:false */
+function MainController($window, TweetsFactory, linkify) {
 
+<<<<<<< ac1860e6dc1148288c8ee20fa243604794eded11
 
 function MainController($window, TweetsFactory, GmailFactory, PostsFactory, linkify) {
 
+=======
+  const vm = this;
+>>>>>>> chore: merge changes
   const gapi = $window.gapi;
 
   //<editor-fold desc="Get and display tweets">
@@ -124,6 +130,10 @@ angular
   .module('universal-inbox.MainController', [])
   .controller('MainController', MainController);
 
+<<<<<<< ac1860e6dc1148288c8ee20fa243604794eded11
 
 MainController.$inject = ['$window', 'TweetsFactory', 'GmailFactory', 'PostsFactory', jQuery.isWindow('object')'linkify'];
 
+=======
+MainController.$inject = ['$window', 'TweetsFactory', 'linkify'];
+>>>>>>> chore: merge changes
