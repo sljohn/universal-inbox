@@ -125,7 +125,5 @@ angular
   .module('universal-inbox.MainController', [])
   .controller('MainController', MainController);
 
-MainController.$inject = ['$window', 'TweetsFactory', 'GmailFactory', 
-                          'PostsFactory', 'linkify'
-                         ];
+MainController.$inject = ['$window', 'TweetsFactory', 'GmailFactory', 'PostsFactory', 'linkify'];
 
