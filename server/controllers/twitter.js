@@ -22,19 +22,19 @@ function cacheTweets(username) {
 
   //get most recent since_id
 
-  DbTweet.findOne({'text': {'$regex': username, '$options': 'i'}})
+  DbTweet.findOne({ text: { $regex: username, $options: 'i' } })
   .sort('-id_str')
-  .exec(function(err, mostRecentTweet) {
+  .exec(function (err, mostRecentTweet) {
     let sinceId;
     if (mostRecentTweet) {
       sinceId = mostRecentTweet.id_str;
     }
-    //prepend all usernames with %40, replacing the @ symbol if provided
 
+    //prepend all usernames with %40, replacing the @ symbol if provided
     username = username.replace(/^(@|%40)?/, '%40');
     const query = { q: username, since_id: sinceId };
 
-      client.get('search/tweets', query, function (error, tweets) {
+    client.get('search/tweets', query, function (error, tweets) {
       if (error) {
         console.log('Error retrieving tweets: ', error);
       } else {
@@ -50,7 +50,7 @@ function cacheTweets(username) {
 
 }
 
- //TODO: move this initial caching to a more appropriate place in the code.
+//TODO: move this initial caching to a more appropriate place in the code.
 const username = 'makersquare';
 cacheTweets(username);
 
