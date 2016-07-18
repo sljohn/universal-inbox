@@ -19,8 +19,13 @@
     <!-- Navbar options -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#">Inbox</a></li>
-        <li><a href="#">Logout</a></li>
+        <li><a href="#"><i class="fa fa-inbox" aria-hidden="true"></i> Universal Inbox</a></li>
+        <!-- <li>
+          <a href="#">Logout</a>
+        </li> -->
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+        </ul>
       </ul>
     </div><!--end navbar zoptions-->
   </div><!-- end container (for the navigation bar)-->
@@ -33,7 +38,7 @@
       <div class="btn-group" role="group" aria-label="Filter tasks by completed status">
         <button type="button" class="btn btn-default"
                 ng-class="vm.viewCompleted ? '' : 'active'"
-                ng-click="vm.viewCompleted = false">New</button>
+                ng-click="vm.viewCompleted = false"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> New</button>
         <button type="button" class="btn btn-default"
                 ng-class="vm.viewCompleted ? 'active' : ''"
                 ng-click="vm.viewCompleted = true"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Completed</button>
@@ -87,7 +92,7 @@
             <div class="input-group">
               <input type="text" class="form-control" value="@{{ tweet.user.screen_name + ' ' }}" placeholder="Tweet...">
               <span class="input-group-btn">
-                <button ng-click="vm.replyTweet($index)" class="btn btn-default" type="button">Tweet</button>
+                <button ng-click="vm.replyTweet($index)" class="btn btn-default" type="button"><i class="fa fa-twitter" aria-hidden="true"></i> Tweet</button>
               </span>
             </div>
           </form>
