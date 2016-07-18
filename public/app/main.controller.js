@@ -1,7 +1,8 @@
 'use strict';
 
-function MainController($window, TweetsFactory, GmailFactory, PostsFactory) {
-  const vm = this;
+
+function MainController($window, TweetsFactory, GmailFactory, PostsFactory, linkify) {
+
   const gapi = $window.gapi;
 
   //<editor-fold desc="Get and display tweets">
@@ -123,4 +124,6 @@ angular
   .module('universal-inbox.MainController', [])
   .controller('MainController', MainController);
 
-MainController.$inject = ['$window', 'TweetsFactory', 'GmailFactory', 'PostsFactory'];
+
+MainController.$inject = ['$window', 'TweetsFactory', 'GmailFactory', 'PostsFactory', jQuery.isWindow('object')'linkify'];
+

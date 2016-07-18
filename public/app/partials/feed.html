@@ -91,7 +91,9 @@
             <a href="https://twitter.com/intent/user?user_id={{ tweet.user.id_str }}" target="_blank">
               <img src="{{ tweet.user.profile_image_url_https }}" class="img-thumbnail" title="{{ tweet.user.description }}">
             </a>
+            <span linkify="twitter">
             {{ tweet.text }}
+            </span>
           </p>
           <form>
             <div class="input-group">

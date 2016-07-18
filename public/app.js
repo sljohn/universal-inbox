@@ -11,4 +11,5 @@ angular
     'universal-inbox.TweetsFactory',
     'universal-inbox.GmailFactory',
     'universal-inbox.PostsFactory',
+    'linkify'
   ]);
