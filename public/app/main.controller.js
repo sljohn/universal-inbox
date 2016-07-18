@@ -1,6 +1,8 @@
 'use strict';
+/* jshint unused:false */
 
-function MainController($window, TweetsFactory, GmailFactory, PostsFactory) {
+function MainController($window, TweetsFactory, GmailFactory, PostsFactory, linkify) {
+
   const vm = this;
   const gapi = $window.gapi;
 
@@ -123,4 +125,7 @@ angular
   .module('universal-inbox.MainController', [])
   .controller('MainController', MainController);
 
-MainController.$inject = ['$window', 'TweetsFactory', 'GmailFactory', 'PostsFactory'];
+MainController.$inject = ['$window', 'TweetsFactory', 'GmailFactory', 
+                          'PostsFactory', 'linkify'
+                         ];
+
