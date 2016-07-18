@@ -6,6 +6,7 @@ body {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  min-width: 320px;
 }
 
 h1,
@@ -168,11 +169,12 @@ footer p {
   }
 
   .navbar-nav {
-    display: table;
+    /*display: table;*/
     float: none;
     margin: 0 auto;
-    table-layout: fixed;
+    /*table-layout: fixed;*/
     font-size: 1.25em;
+    letter-spacing: 1px;
   }
 }
 
@@ -213,4 +215,12 @@ input {
 .inbox__filters input[type=text]{
   width: 200px;
   display: inline-block;
+}
+
+.navbar-right {
+  font-size: 1em;
+}
+
+.fa-twitter, .fa-twitter-square {
+  color: #00aced
 }
