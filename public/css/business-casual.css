@@ -234,3 +234,7 @@ input {
   background-color: #F90101;
   color: #fff;
 }
+
+.tab-content {
+  padding-top: 1em;
+}
