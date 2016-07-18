@@ -49,9 +49,10 @@ app.use(express.static(path.join(__dirname, '../public')));
 ** App routes.
 */
 app.get('/', homeController.index);
+
 //TODO: fill empty object with username from the request
-app.get('/api/twitter', function(req, res) {
-  twitterController.findDbTweets({}).then(function(tweets) {
+app.get('/api/twitter', function (req, res) {
+  twitterController.findDbTweets({}).then(function (tweets) {
     res.json(tweets);
   });
 });
@@ -62,13 +63,24 @@ app.use('/api/posts', postRoutes);
 // Fetch latest 10 emails and show the snippet
 const Gmail = require('node-gmail-api');
 const gmail = new Gmail(process.env.GMAIL_ACCESS_TOKEN);
-const s = gmail.messages('label:inbox', { max: 10 });
+const search = gmail.messages('label:inbox',
+  { max: 10, fields: ['id', 'internalDate', 'labelIds', 'payload'] });
 
-s.on('data', function (d) {
-  console.log('[server.js] Gmail snippet: ', d.snippet);
+search.on('data', function (data) {
+  const msg = { id: data.id };
+
+  for (let i = 0; i < data.payload.headers.length; i++) {
+    const headerName = data.payload.headers[i].name;
+    const desiredHeaders = ['From', 'Date', 'Subject'];
+    if (~desiredHeaders.indexOf(headerName)) {
+      msg[headerName] = data.payload.headers[i].value;
+    }
+  }
+
+  console.log(msg);
 });
 
-s.on('error', function(err) {
+search.on('error', function (err) {
   console.error('Error retrieving Gmails: ', err);
 });
 
