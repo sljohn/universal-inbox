@@ -60,7 +60,7 @@
       <div class="panel panel-default animated fadeIn" set-height>
         <div class="panel-heading">
           <h3 class="panel-title">
-            <a href="https://twitter.com/intent/user?user_id={{ tweet.user.id_str }}" target="_blank">
+            <a href="https://twitter.com/intent/tweet?in_reply_to=463440424141459456" target="_blank">
               {{ tweet.user.name }}
               <small>@{{ tweet.user.screen_name }}</small>
             </a>
@@ -91,9 +91,9 @@
           </p>
           <form>
             <div class="input-group">
-              <input type="text" class="form-control" value="@{{ tweet.user.screen_name + ' ' }}" placeholder="Tweet...">
+              <input type="text" ng-model="vm.replyText[$index]" ng-init="vm.replyText[$index] = '@' + tweet.user.screen_name + ' '" class="form-control" placeholder="Tweet...">
               <span class="input-group-btn">
-                <button ng-click="vm.replyTweet($index)" class="btn btn-default" type="button"><i class="fa fa-twitter" aria-hidden="true"></i> Tweet</button>
+                <a ng-href="https://twitter.com/intent/tweet?in_reply_to={{tweet.id_str}}&text={{vm.replyText[$index]}}" class="btn btn-default">Tweet</a>
               </span>
             </div>
           </form>
