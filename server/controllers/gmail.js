@@ -1,3 +1,5 @@
+'use strict';
+
 const userGmails = [
   { id: '155ff0c28f523279',
     snippet: 'I ordered a box of peanut brittle five weeks ago. ' +
