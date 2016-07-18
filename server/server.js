@@ -59,4 +59,17 @@ app.get('/api/twitter', function(req, res) {
 const postRoutes = require('./routes/postRoutes');
 app.use('/api/posts', postRoutes);
 
+// Fetch latest 10 emails and show the snippet
+const Gmail = require('node-gmail-api');
+const gmail = new Gmail(process.env.GMAIL_ACCESS_TOKEN);
+const s = gmail.messages('label:inbox', { max: 10 });
+
+s.on('data', function (d) {
+  console.log('[server.js] Gmail snippet: ', d.snippet);
+});
+
+s.on('error', function(err) {
+  console.error('Error retrieving Gmails: ', err);
+});
+
 module.exports = app;
