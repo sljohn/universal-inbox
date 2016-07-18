@@ -8,5 +8,7 @@ angular
     'universal-inbox.AuthController',
     'universal-inbox.PostsFactory',
     'universal-inbox.MainController',
-    'universal-inbox.TweetsFactory'
+    'universal-inbox.TweetsFactory',
+    'universal-inbox.GmailFactory',
+    'universal-inbox.PostsFactory',
   ]);
