@@ -13,15 +13,20 @@
         <span class="icon-bar"></span>
       </button>
       <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-      <a class="navbar-brand" href="index.html">Universal Inbox</a>
+      <a class="navbar-brand" ui-sref="/">Universal Inbox</a>
     </div><!-- close navbar header-->
 
     <!-- Navbar options -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#">Inbox</a></li>
+        <li><a href="#"><i class="fa fa-inbox" aria-hidden="true"></i> Universal Inbox</a></li>
         <li ng-click="vm.checkAuth()"><a href="#">Connect Gmail</a></li>
-        <li><a href="#">Logout</a></li>
+        <!-- <li>
+          <a href="#">Logout</a>
+        </li> -->
+        <ul class="nav navbar-nav navbar-right">
+          <li><a ui-sref="/"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+        </ul>
       </ul>
     </div><!--end navbar zoptions-->
   </div><!-- end container (for the navigation bar)-->
