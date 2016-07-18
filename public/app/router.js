@@ -8,6 +8,11 @@ angular
     $stateProvider
       .state('/', {
         url: '/',
+        templateUrl: 'app/partials/login.html',
+        controller: 'AuthController as vm',
+      })
+      .state('feed', {
+        url: '/feed',
         templateUrl: 'app/partials/feed.html',
         controller: 'MainController as vm',
       });

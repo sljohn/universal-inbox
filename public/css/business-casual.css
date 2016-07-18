@@ -73,13 +73,13 @@ hr {
   border-color: #999999;
 }
 
-.box {
-  margin-bottom: 20px;
+.box, #login {
+  /*margin-bottom: 20px;*/
   padding: 30px 15px;
   background: #fff;
   background: rgba(255, 255, 255, 0.9);
-  width: 700px;
-  margin-left: 250px;
+  /*width: 700px;*/
+  /*margin-left: 250px;*/
   border-radius: 25px;
 }
 
@@ -190,7 +190,7 @@ footer p {
   margin-left: 1100px;
 }
 
-.container.regBox {
+.container.regBox, #login {
   margin-top: 200px;
 }
 
@@ -222,5 +222,15 @@ input {
 }
 
 .fa-twitter, .fa-twitter-square {
-  color: #00aced
+  color: #00aced;
+}
+
+.twitter, .twitter .fa-twitter {
+  background-color: #00aced;
+  color: #fff;
+}
+
+.google {
+  background-color: #F90101;
+  color: #fff;
 }
