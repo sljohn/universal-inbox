@@ -12,111 +12,40 @@ const userGmails = [
     Date: 'Mon, 18 Jul 2016 03:24:15 -0700',
     Subject: 'How can I prepare to join MakerSquare?',
     From: 'Elyse Green <elgreen@ucdavis.edu>', },
-  { id: '155f85966547f95a',
-    snippet: 'Here are the stories people are talking about Trending Now on Facebook Here are' +
-    ' the stories people are talking about. Teen Wolf 1st Look of Actor Dylan O&#39;Brien on 6th' +
-    ' Season of TV Series Released -',
+  { id: '15600da6a5a356d1',
+    snippet: 'On behalf of our company, RSquare, I demand that you stop violating our trademark' +
+    ' with your "Make RSquare" website. If you don\'t, I\'ll have to serve you with a cease and' +
+    ' desist letter. Alfred Pennyworth General Counsel RSquare, Inc.',
     Date: 'Sun, 17 Jul 2016 03:14:14 -0700',
-    Subject: 'Teen Wolf and Overwatch are Trending on Facebook',
-    From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
-  { id: '155f67cd010eee72',
-    snippet: 'The fastest way to find all of your friends on Facebook is importing your email ' +
-    'contacts. Once you&#39;ve imported your contacts you can view, manage or delete them at any ' +
-    'time. Find more of your',
+    Subject: 'Stop violating our trademark',
+    From: 'Alfred Pennyworth <counsel@RealMakeRSquare.com>', },
+  { id: '15600ce057529519',
+    snippet: 'Remember Sloth from The Goonies? https://www.youtube.com/watch?v=4Vv5CsP1pAg',
     Date: 'Sat, 16 Jul 2016 18:33:42 -0700',
-    Subject: 'You have more friends on Facebook than you think',
-    From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
-  { id: '155f311a8d5aa417',
-    snippet: 'Here are the stories people are talking about Trending Now on Facebook Here are ' +
-    'the stories people are talking about. Wonder Woman Entertainment Weekly Debuts New Images' +
-    ' of Actress Gal Gadot for',
+    Subject: 'Hey You Guys!',
+    From: 'SiLLyJustin <sillyjustin@gmail.com>', },
+  { id: '15600cef9e3300c8',
+    snippet: 'This message is intended to be private and had better not be up on ' +
+    'some projector somewhere...or I\'ll sue!!!',
     Date: 'Sat, 16 Jul 2016 02:37:47 -0700',
-    Subject: 'Wonder Woman and California are Trending on Facebook',
-    From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
-  { id: '155f16a20238fa7a',
-    snippet: 'The fastest way to find all of your friends on Facebook is importing your email ' +
-    'contacts. Once you&#39;ve imported your contacts you can view, manage or delete them at any' +
-    ' time. Find more of your',
+    Subject: 'Customer complaint',
+    From: 'Bonnie Torre <torre.bonnie@gmail.com>', },
+  { id: '15600cf8f641ed01',
+    snippet: 'I know a lot of Pokemon tricks...',
     Date: 'Fri, 15 Jul 2016 18:55:11 -0700',
-    Subject: 'You have more friends on Facebook than you think',
-    From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
-  { id: '155edf10a8cb487b',
-    snippet: 'Here are the stories people are talking about Trending Now on Facebook Here are the' +
-    ' stories people are talking about. Lea Michele Actress Honors Former Boyfriend, ' +
-    '&#39;Glee&#39; Co-Star Cory Monteith,',
+    Subject: 'FB: Hey can you be my friend?',
+    From: 'Justin M Lien <lien.justin.m@gmail.com>', },
+  { id: '15600d20e83e7fa1',
+    snippet: 'Gabriel Tramullas is the best! https://www.youtube.com/watch?v=XVPNUIJjG5E',
     Date: 'Fri, 15 Jul 2016 02:44:04 -0700',
-    Subject: 'Lea Michele and Reynoldsburg, Ohio are Trending on Facebook',
-    From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
-  { id: '155ec0b7fac41561',
-    snippet: 'Here are the stories people are talking about Trending Now on Facebook Here are' +
-    ' the stories people are talking about. Mo&#39;Nique Comedian and Actress Discusses Her' +
-    ' Open Marriage With Husband Sidney',
+    Subject: 'Watch this aerial rope act!!!',
+    From: 'John Slape <slape.john@gmail.com>', },
+  { id: '15600d2b0de3d49b',
+    snippet: 'My favorite Epic Rap Battle! You have to watch this: ' +
+    'https://www.youtube.com/watch?v=KfkR5o_bcSg',
     Date: 'Thu, 14 Jul 2016 17:53:43 -0700',
-    Subject: 'Mo\'Nique and Tituss Burgess are Trending on Facebook',
-    From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
-  { id: '155e8924eef7da53',
-    snippet: 'The fastest way to find all of your friends on Facebook is importing your email' +
-    ' contacts. Once you&#39;ve imported your contacts you can view, manage or delete them' +
-    ' at any time. Find more of your',
-    Date: 'Thu, 14 Jul 2016 01:42:28 -0700',
-    Subject: 'You have more friends on Facebook than you think',
-    From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
-  { id: '155e6d37cbc9edc2',
-    snippet: 'Here are the stories people are talking about Trending Now on Facebook Here ' +
-    'are the stories people are talking about. Victoria Beckham Fashion Designer and Model Posts' +
-    ' Picture of Herself Kissing Her',
-    Date: 'Wed, 13 Jul 2016 17:34:25 -0700',
-    Subject: 'Victoria Beckham and Teen Mom 2 are Trending on Facebook',
-    From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
-  { id: '155e37bf3cfd592c',
-    snippet: 'The fastest way to find all of your friends on Facebook is importing your ' +
-    'email contacts. Once you&#39;ve imported your contacts you can view, manage or ' +
-    'delete them at any time. Find more of your',
-    Date: 'Wed, 13 Jul 2016 01:59:57 -0700',
-    Subject: 'You have more friends on Facebook than you think',
-    From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
-  { id: '155e1fc041219878',
-    snippet: 'Here are the stories people are talking about Trending Now on Facebook ' +
-    'Here are the stories people are talking about. The Flash The CW Reveals Costume ' +
-    'Design for Kid Flash Character - Variety More',
-    Date: 'Tue, 12 Jul 2016 19:00:36 -0700',
-    Subject: 'The Flash and Minnesota Lynx are Trending on Facebook',
-    From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
-  { id: '155e02304ccf9c3b',
-    snippet: 'Here are the stories people are talking about Trending Now on Facebook ' +
-    'Here are the stories people are talking about. Google &#39;Pokémon GO&#39; Addre' +
-    'sses Message That Says It Has &#39;Full Access',
-    Date: 'Tue, 12 Jul 2016 10:23:58 -0700',
-    Subject: 'Google and Saint Paul, Minnesota are Trending on Facebook',
-    From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
-  { id: '155dddfbb10e796d',
-    snippet: 'The fastest way to find all of your friends on Facebook is importing yo' +
-    'ur email contacts. Once you&#39;ve imported your contacts you can view, manage o' +
-    'r delete them at any time. Find more of your',
-    Date: 'Mon, 11 Jul 2016 23:51:14 -0700',
-    Subject: 'You have more friends on Facebook than you think',
-    From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
-  { id: '155dc20e8924d4b7',
-    snippet: 'The fastest way to find all of your friends on Facebook is importing y' +
-    'our email contacts. Once you&#39;ve imported your contacts you can view, manage' +
-    ' or delete them at any time. Find more of your',
-    Date: 'Mon, 11 Jul 2016 15:43:11 -0700',
-    Subject: 'You have more friends on Facebook than you think',
-    From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
-  { id: '155da4eac5a5653e',
-    snippet: 'Add the people you know to see their photos and updates. Rachelle Cu M' +
-    'eksavanh Add Friend Martin Leong Tennyson High Add Friend People You May Know A' +
-    'dd the people you know to see their photos and',
-    Date: 'Mon, 11 Jul 2016 07:13:56 -0700',
-    Subject: 'Do you know Rachelle Cu Meksavanh and Martin Leong?',
-    From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
-  { id: '155d07f093a094c9',
-    snippet: 'We&#39;re so glad you&#39;re on Facebook! Facebook is better with frie' +
-    'nds, so start connecting with people you know. Chat with Friends and Family We ' +
-    'want your experience on Facebook to be full of',
-    Date: 'Sat, 9 Jul 2016 09:30:34 -0700',
-    Subject: 'Welcome to Facebook: 3 ways to get started',
-    From: 'Facebook <registration@facebookmail.com>', },
+    Subject: 'Hannibal vs Jack the Ripper',
+    From: 'John Slape <slape.john@gmail.com>', },
 ];
 
 // Fetch latest 10 emails and show the snippet
