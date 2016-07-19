@@ -46,7 +46,6 @@
       <!--</div>-->
     </div>
     <div class="col-md-6 inbox--filter-textbox inbox__filter-component text-center">
-      <!--<span><strong>Search: </strong></span>-->
       <input type="text" class="form-control" ng-model="vm.postsSearch" placeholder="Search">
     </div>
   </div>
@@ -93,7 +92,8 @@
                 <div class="input-group">
                   <input type="text" ng-model="vm.replyText[$index]" ng-init="vm.replyText[$index] = '@' + tweet.user.screen_name + ' '" class="form-control" placeholder="Tweet..."> 
                     <span class="input-group-btn"> 
-                      <a ng-href="https://twitter.com/intent/tweet?in_reply_to={{tweet.id_str}}&text={{vm.replyText[$index]}}" class="btn btn-default">Tweet</a>
+                      <a ng-href="https://twitter.com/intent/tweet?in_reply_to={{tweet.id_str}}&text={{vm.replyText[$index]}}" class="btn btn-default">
+                      <i class="fa fa-twitter" aria-hidden="true"></i> Tweet</a>
                   </span>
                 </div>
               </form>
@@ -111,7 +111,6 @@
               <h3 class="panel-title">
                 <a href="https://mail.google.com/mail/u/0/#inbox/{{ email.id }}" target="_blank">
                   {{ email.From }}
-                  <!--<small>{{ email.Subject }}</small>-->
                 </a>
               </h3>
             </div>
@@ -139,9 +138,8 @@
                 </a>
                 <span id="snippet">{{ email.snippet }}</div>
               </p>
-              <form>
+              <form class="gmailButton">
                 <div class="input-group">
-                  <input type="text" class="form-control" value="" placeholder="Reply...">
                   <span class="input-group-btn">
                     <button ng-click="vm.replyTweet($index)" class="btn btn-default" type="button"></i> Reply</button>
                   </span>
