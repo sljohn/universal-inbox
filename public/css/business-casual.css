@@ -238,3 +238,8 @@ input {
 .tab-content {
   padding-top: 1em;
 }
+
+#envelope {
+  height: 1.3em;
+  width: 1.3em;
+}
