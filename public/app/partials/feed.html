@@ -88,7 +88,7 @@
             <div class="input-group">
               <input type="text" class="form-control" value="@{{ tweet.user.screen_name + ' ' }}" placeholder="Tweet...">
               <span class="input-group-btn">
-                <button ng-click="vm.replyTweet($index)" class="btn btn-default" type="button">Tweet</button>
+                 <a ng-href="https://twitter.com/intent/tweet?in_reply_to={{tweet.id_str}}&text={{vm.replyText[$index]}}" class="btn btn-default">Tweet</a>
               </span>
             </div>
           </form>
