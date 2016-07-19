@@ -136,15 +136,15 @@ function MainController($window, TweetsFactory, GmailFactory, PostsFactory, link
       From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
     { id: '155f85966547f95a',
       snippet: 'Here are the stories people are talking about Trending Now on Facebook Here are' +
-      ' the stories people are talking about. Teen Wolf 1st Look of Actor Dylan O&#39;Brien on 6th' +
-      ' Season of TV Series Released -',
+      ' the stories people are talking about. Teen Wolf 1st Look of Actor Dylan ' +
+      'O&#39;Brien on 6th Season of TV Series Released -',
       Date: 'Sun, 17 Jul 2016 03:14:14 -0700',
       Subject: 'Teen Wolf and Overwatch are Trending on Facebook',
       From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
     { id: '155f67cd010eee72',
       snippet: 'The fastest way to find all of your friends on Facebook is importing your email ' +
-      'contacts. Once you&#39;ve imported your contacts you can view, manage or delete them at any ' +
-      'time. Find more of your',
+      'contacts. Once you&#39;ve imported your contacts you can view, manage or ' +
+      'delete them at any time. Find more of your',
       Date: 'Sat, 16 Jul 2016 18:33:42 -0700',
       Subject: 'You have more friends on Facebook than you think',
       From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
@@ -157,15 +157,15 @@ function MainController($window, TweetsFactory, GmailFactory, PostsFactory, link
       From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
     { id: '155f16a20238fa7a',
       snippet: 'The fastest way to find all of your friends on Facebook is importing your email ' +
-      'contacts. Once you&#39;ve imported your contacts you can view, manage or delete them at any' +
-      ' time. Find more of your',
+      'contacts. Once you&#39;ve imported your contacts you can view, ' +
+      'manage or delete them at any time. Find more of your',
       Date: 'Fri, 15 Jul 2016 18:55:11 -0700',
       Subject: 'You have more friends on Facebook than you think',
       From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
     { id: '155edf10a8cb487b',
-      snippet: 'Here are the stories people are talking about Trending Now on Facebook Here are the' +
-      ' stories people are talking about. Lea Michele Actress Honors Former Boyfriend, ' +
-      '&#39;Glee&#39; Co-Star Cory Monteith,',
+      snippet: 'Here are the stories people are talking about Trending ' +
+      'Now on Facebook Here are the stories people are talking about. Lea ' +
+      'Michele Actress Honors Former Boyfriend, &#39;Glee&#39; Co-Star Cory Monteith,',
       Date: 'Fri, 15 Jul 2016 02:44:04 -0700',
       Subject: 'Lea Michele and Reynoldsburg, Ohio are Trending on Facebook',
       From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
@@ -185,8 +185,8 @@ function MainController($window, TweetsFactory, GmailFactory, PostsFactory, link
       From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
     { id: '155e6d37cbc9edc2',
       snippet: 'Here are the stories people are talking about Trending Now on Facebook Here ' +
-      'are the stories people are talking about. Victoria Beckham Fashion Designer and Model Posts' +
-      ' Picture of Herself Kissing Her',
+      'are the stories people are talking about. Victoria Beckham Fashion Designer and ' +
+      'Model Posts Picture of Herself Kissing Her',
       Date: 'Wed, 13 Jul 2016 17:34:25 -0700',
       Subject: 'Victoria Beckham and Teen Mom 2 are Trending on Facebook',
       From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
