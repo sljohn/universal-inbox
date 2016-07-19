@@ -243,3 +243,16 @@ input {
   height: 1.3em;
   width: 1.3em;
 }
+
+.tabHead {
+  font-weight: bold;
+}
+
+#subjLine {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+#snippet {
+  font-size: 1em;
+}
