@@ -46,8 +46,8 @@
       <!--</div>-->
     </div>
     <div class="col-md-6 inbox--filter-textbox inbox__filter-component text-center">
-      <span><strong>Search: </strong></span>
-      <input type="text" class="form-control" ng-model="vm.postsSearch">
+      <!--<span><strong>Search: </strong></span>-->
+      <input type="text" class="form-control" ng-model="vm.postsSearch" placeholder="Search">
     </div>
   </div>
   <div class="row">
@@ -143,7 +143,7 @@
                 <div class="input-group">
                   <input type="text" class="form-control" value="" placeholder="Reply...">
                   <span class="input-group-btn">
-                    <button ng-click="vm.replyTweet($index)" class="btn btn-default" type="button"><i class="fa fa-google" aria-hidden="true"></i> Reply</button>
+                    <button ng-click="vm.replyTweet($index)" class="btn btn-default" type="button"></i> Reply</button>
                   </span>
                 </div>
               </form>
