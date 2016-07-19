@@ -91,9 +91,9 @@
               </p>
               <form>
                 <div class="input-group">
-                  <input type="text" class="form-control" value="@{{ tweet.user.screen_name + ' ' }}" placeholder="Tweet...">
-                  <span class="input-group-btn">
-                     <a ng-href="https://twitter.com/intent/tweet?in_reply_to={{tweet.id_str}}&text={{vm.replyText[$index]}}" class="btn btn-default"><i class="fa fa-twitter" aria-hidden="true"></i> Tweet</a>
+                  <input type="text" ng-model="vm.replyText[$index]" ng-init="vm.replyText[$index] = '@' + tweet.user.screen_name + ' '" class="form-control" placeholder="Tweet..."> 
+                    <span class="input-group-btn"> 
+                      <a ng-href="https://twitter.com/intent/tweet?in_reply_to={{tweet.id_str}}&text={{vm.replyText[$index]}}" class="btn btn-default">Tweet</a>
                   </span>
                 </div>
               </form>
@@ -146,18 +146,6 @@
                   </span>
                 </div>
               </form>
-          <p linkify>
-            <a href="https://twitter.com/intent/user?user_id={{ tweet.user.id_str }}" target="_blank">
-              <img src="{{ tweet.user.profile_image_url_https }}" class="img-thumbnail" title="{{ tweet.user.description }}">
-            </a>
-            {{ tweet.text }}
-          </p>
-          <form>
-            <div class="input-group">
-              <input type="text" ng-model="vm.replyText[$index]" ng-init="vm.replyText[$index] = '@' + tweet.user.screen_name + ' '" class="form-control" placeholder="Tweet...">
-              <span class="input-group-btn">
-                <a ng-href="https://twitter.com/intent/tweet?in_reply_to={{tweet.id_str}}&text={{vm.replyText[$index]}}" class="btn btn-default">Tweet</a>
-              </span>
             </div>
           </div>
         </div>
