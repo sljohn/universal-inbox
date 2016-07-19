@@ -82,7 +82,7 @@
                 </span>
                 <div class="clearfix"></div>
               </div>
-              <p>
+              <p linkify>
                 <a href="https://twitter.com/intent/user?user_id={{ tweet.user.id_str }}" target="_blank">
                   <img src="{{ tweet.user.profile_image_url_https }}" class="img-thumbnail" title="{{ tweet.user.description }}">
                 </a>
@@ -131,17 +131,16 @@
                 </span>
                 <div class="clearfix"></div>
               </div>
-              <div id="subjLine">Subject:   {{ email.Subject }}</div>
+              <div id="subjLine">{{ email.Subject }}</div>
               <p>
-                <a href="https://mail.google.com/mail/u/0/#inbox/{{ email.id }}" target="_blank">
-                  <img src="{{ email.user.profile_image_url_https }}" class="img-thumbnail" title="{{ email.user.description }}">
+              <p linkify>
                 </a>
                 <span id="snippet">{{ email.snippet }}</div>
               </p>
               <form class="gmailButton">
                 <div class="input-group">
-                  <span class="input-group-btn">
-                    <button ng-click="vm.replyTweet($index)" class="btn btn-default" type="button"></i> Reply</button>
+                   <input type="text" class="form-control" value="" placeholder="Reply...">                  <span class="input-group-btn">
+                    <a ng-href="https://mail.google.com/mail/u/0/#inbox/{{ email.id }}" class="btn btn-default">Reply</a>
                   </span>
                 </div>
               </form>
