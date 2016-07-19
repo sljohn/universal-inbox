@@ -56,7 +56,7 @@
         <uib-tab-heading>
           <i class="fa fa-twitter" aria-hidden="true"></i> Twitter
         </uib-tab-heading>
-        <div class="col-md-6" ng-repeat="tweet in vm.tweets | filter: vm.matchesCompletedFilter | filter: vm.postsSearch">
+        <div class="col-md-6" ng-repeat="tweet in vm.tweets | orderBy: '-id_str' | filter: vm.matchesCompletedFilter | filter: vm.postsSearch">
           <div class="panel panel-default animated fadeIn" set-height>
             <div class="panel-heading">
               <h3 class="panel-title">
