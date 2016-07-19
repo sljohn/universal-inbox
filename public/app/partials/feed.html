@@ -46,15 +46,15 @@
       <!--</div>-->
     </div>
     <div class="col-md-6 inbox--filter-textbox inbox__filter-component text-center">
-      <span><strong>Search: </strong></span>
-      <input type="text" class="form-control" ng-model="vm.postsSearch">
+      <!--<span><strong>Search: </strong></span>-->
+      <input type="text" class="form-control" ng-model="vm.postsSearch" placeholder="Search">
     </div>
   </div>
   <div class="row">
     <uib-tabset active="active">
       <uib-tab index="0">
         <uib-tab-heading>
-          <i class="fa fa-twitter" aria-hidden="true"></i> Twitter
+          <i class="fa fa-twitter" aria-hidden="true"></i><span class="tabHead"> Twitter</span>
         </uib-tab-heading>
         <div class="col-md-6" ng-repeat="tweet in vm.tweets | orderBy: '-id_str' | filter: vm.matchesCompletedFilter | filter: vm.postsSearch">
           <div class="panel panel-default animated fadeIn" set-height>
@@ -103,7 +103,7 @@
       </uib-tab>
       <uib-tab index="1" heading="Gmail">
         <uib-tab-heading>
-          <i class="fa fa-google-plus" aria-hidden="true"></i> Gmail
+          <img ng-src="../css/images/envelope.ico" id="envelope"/> <span class="tabHead">Gmail</span>
         </uib-tab-heading>
         <div class="col-md-6" ng-repeat="email in vm.emails | filter: vm.matchesCompletedFilter | filter: vm.postsSearch">
           <div class="panel panel-default animated fadeIn" set-height>
@@ -111,7 +111,7 @@
               <h3 class="panel-title">
                 <a href="https://mail.google.com/mail/u/0/#inbox/{{ email.id }}" target="_blank">
                   {{ email.From }}
-                  <small>{{ email.Subject }}</small>
+                  <!--<small>{{ email.Subject }}</small>-->
                 </a>
               </h3>
             </div>
@@ -132,17 +132,18 @@
                 </span>
                 <div class="clearfix"></div>
               </div>
+              <div id="subjLine">Subject:   {{ email.Subject }}</div>
               <p>
                 <a href="https://mail.google.com/mail/u/0/#inbox/{{ email.id }}" target="_blank">
                   <img src="{{ email.user.profile_image_url_https }}" class="img-thumbnail" title="{{ email.user.description }}">
                 </a>
-                {{ email.snippet }}
+                <span id="snippet">{{ email.snippet }}</div>
               </p>
               <form>
                 <div class="input-group">
                   <input type="text" class="form-control" value="" placeholder="Reply...">
                   <span class="input-group-btn">
-                    <button ng-click="vm.replyTweet($index)" class="btn btn-default" type="button"><i class="fa fa-google" aria-hidden="true"></i> Reply</button>
+                    <button ng-click="vm.replyTweet($index)" class="btn btn-default" type="button"></i> Reply</button>
                   </span>
                 </div>
               </form>

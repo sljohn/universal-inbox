@@ -75,7 +75,7 @@ hr {
 
 .box, #login {
   /*margin-bottom: 20px;*/
-  padding: 30px 15px;
+  padding: 3em 2em;
   background: #fff;
   background: rgba(255, 255, 255, 0.9);
   /*width: 700px;*/
@@ -237,4 +237,22 @@ input {
 
 .tab-content {
   padding-top: 1em;
+}
+
+#envelope {
+  height: 1.3em;
+  width: 1.3em;
+}
+
+.tabHead {
+  font-weight: bold;
+}
+
+#subjLine {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+#snippet {
+  font-size: .9em;
 }
