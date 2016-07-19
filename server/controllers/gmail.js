@@ -7,13 +7,11 @@ const userGmails = [
     From: 'Nicholas Barry <niko.barry@gmail.com>',
     Date: 'Mon, 18 Jul 2016 10:26:34 -0700',
     Subject: 'Where\'s my order?!', },
-  { id: '155fd88ea6fb6740',
-    snippet: 'Here are the stories people are talking about Trending Now on Facebook' +
-    ' Here are the stories people are talking about. Sonia Kruger TV Personality Calls for ' +
-    'Muslim Immigration to End Because She Wants',
+  { id: '156007a054cd1e85',
+    snippet: 'I\'m curious about MakerSquare. What does it take to become a student? Elyse',
     Date: 'Mon, 18 Jul 2016 03:24:15 -0700',
-    Subject: 'Sonia Kruger and Central Park are Trending on Facebook',
-    From: 'Facebook <notification+zrdvf1pi6c61@facebookmail.com>', },
+    Subject: 'How can I prepare to join MakerSquare?',
+    From: 'Elyse Green <elgreen@ucdavis.edu>', },
   { id: '155f85966547f95a',
     snippet: 'Here are the stories people are talking about Trending Now on Facebook Here are' +
     ' the stories people are talking about. Teen Wolf 1st Look of Actor Dylan O&#39;Brien on 6th' +
